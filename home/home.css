@@ -1,0 +1,32 @@
+/* CSS Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Righteous", sans-serif;
+    font-weight: 100;
+    color: #b9b9b9;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    background: url("https://wallpapers.com/images/hd/dramatic-lightning-strike-in-4k-resolution-zv1zo4glzd6u3pb9.jpg") no-repeat center center fixed;
+    background-size: 105%;
+}
+
+.container {
+    text-align: center;
+}
+
+.parallax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.1s ease-out;
+}
