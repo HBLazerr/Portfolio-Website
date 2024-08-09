@@ -7,6 +7,12 @@ html {
     font-family: Arial, sans-serif;
 }
 
+:root {
+    --dimmed-color: rgba(0,0,0,.6);
+    --full-color: rgba(0,0,0,1);
+}
+
+
 .container {
     height: 100vh;
     width: 100vw;
@@ -28,10 +34,6 @@ html {
     position: relative;
 }
 
-.content {
-    text-align: center;
-}
-
 
 
 /* TEMPORARY - ONLY TO TELL SECTION DIFFERENCE */
@@ -51,7 +53,6 @@ html {
     gap: 10px;
     z-index: 1000;
 }
-
 .indicator {
     width: 15px;
     height: 15px;
@@ -60,50 +61,110 @@ html {
     transition: background-color 0.3s;
     cursor: pointer;
 }
-
 .indicator.active {
     background-color: #333;
 }
 
-
-
-
 .content {
+    position: relative;
     display: grid;
-    grid-template-columns: 0.7fr 1.7fr;
-    grid-template-rows: 0.8fr 2.1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "project-name project-info"
-        "project-desc project-image";
-}
-
-.project-image {
-    grid-area: project-image;
-}
-
-.project-desc {
-    grid-area: project-desc;
-}
-
-.project-info {
-    grid-area: project-info;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
 }
 
 .project-name {
-    grid-area: project-name;
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
 }
 
+.project-desc {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+
+    width: 25vw;
+}
+#description {
+    margin: 0;
+    opacity: .6;
+}
+
+.project-info {
+    grid-column: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 2;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 45vw;
+
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+}
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    /* Keeps item still */
+    width: 50%;
+}
+
+label {
+    opacity: .6;
+    margin-bottom: 5px;
+}
+
+.project-button {
+    grid-column-start: 1;
+    grid-row-start: 5;
+
+    position: fixed;
+    z-index: 1000;
+}
+
+.view-button {
+    border: 2px dashed var(--dimmed-color);
+    background: none;
+    border-radius: 1px;
+    padding: 6px 16px;
+    cursor: pointer;
+
+    transition: all .3s ease-in-out;
+}
+.view-button:hover {
+    border: 2px dashed var(--full-color);
+    color: var(--dimmed-color);
+}
 
 .project-image {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    grid-row-start: 3;
+
+    position: relative;
+    z-index: 1001;
+
     background: rgb(76, 13, 13);
     background: linear-gradient(180deg, rgba(76, 13, 13, 1) 0%, rgba(43, 46, 53, 1) 64%, rgba(193, 195, 198, 1) 100%);
     padding: 50px;
     border-radius: 15px;
-    width: 80%;
+    width: 40vw;
 }
-
 .project-image img {
     width: 100%;
     border-radius: 15px;

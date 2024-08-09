@@ -1,48 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Projects</title>
     <link rel="stylesheet" href="webProjects.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Indicators for sections -->
     <div class="carousel-indicator">
-        <div class="indicator active" data-section="section1"></div>
-        <div class="indicator" data-section="section2"></div>
-        <div class="indicator" data-section="section3"></div>
+      <div class="indicator active" data-section="section1"></div>
+      <div class="indicator" data-section="section2"></div>
+      <div class="indicator" data-section="section3"></div>
     </div>
 
     <div class="container">
-        <div class="section" id="section1">
-            <div class="content">
+      <div class="section" id="section1">
+        <div class="content">
+          <!-- Fixed Content - START -->
+          <div class="project-name">
+            <h1 id="name"></h1>
+          </div>
 
-                <div class="project-image">
-                    <img src="media/MovieLSTER.png" alt="Movie Lister Project" />
-                </div>
-            </div>
-        </div>
-        <div class="section" id="section2">
-            <div class="content">
+          <div class="project-desc">
+            <p id="description"></p>
+          </div>
 
-                <div class="project-image">
-                    <img src="media/MovieLSTER.png" alt="Movie Lister Project" />
-                </div>
+          <div class="project-info">
+            <div class="info-item">
+              <label>TYPE:</label>
+              <span class="data" id="type"></span>
             </div>
-        </div>
-        <div class="section" id="section3">
-            <div class="content">
+            <div class="info-item">
+              <label>TOOLS:</label>
+              <span class="data" id="tools"></span>
+            </div>
+            <div class="info-item">
+              <label>STATUS:</label>
+              <span class="data" id="status"></span>
+            </div>
+            <div class="info-item">
+              <label>DURATION:</label>
+              <span class="data" id="duration"></span>
+            </div>
+            <div class="info-item">
+              <label>YEAR:</label>
+              <span class="data" id="year"></span>
+            </div>
+          </div>
 
-                <div class="project-image">
-                    <img src="media/MovieLSTER.png" alt="Movie Lister Project" />
-                </div>
-            </div>
+          <div class="project-button">
+            <button class="view-button">VIEW LIVE</button>
+          </div>
+          <!-- Fixed Content - END -->
+
+          <div class="project-image">
+            <img src="media/MovieLSTER.png" alt="Movie Lister Project" />
+          </div>
         </div>
+      </div>
+
+
+      <div class="section" id="section2">
+        <div class="content">
+          <div class="project-image">
+            <img src="media/MovieLSTER.png" alt="Movie Lister Project" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section" id="section3">
+        <div class="content">
+          <div class="project-image">
+            <img src="media/MovieLSTER.png" alt="Movie Lister Project" />
+          </div>
+        </div>
+      </div>
     </div>
     <script src="webProjects.js"></script>
-</body>
-
+  </body>
 </html>
