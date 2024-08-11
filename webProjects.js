@@ -23,39 +23,60 @@ const sectionData = {
         type: "WEB",
         tools: "NODE",
         status: "COMPLETED",
-        duration: "1.5 WEEKS",
+        duration: "9 HRS",
         year: "2024",
-        description: "Here I will write and talk about the project like what it is and what it does. Lorem Ipsum to see how far it goes for now but not long otherwise lose attention.",
-        url: "https://fair-game.org",
-        dimmedColor: "rgba(0,0,0,.6)",
-        fullColor: "rgba(0,0,0,1)",
-        textColor: "green"
+        description: "Anim sunt mollit minim mollit voluptate nulla non. Esse consectetur quis cupidatat ea ipsum laboris tempor ullamco consectetur amet nisi est eu reprehenderit.",
+        url: "https://youtu.be/PVRaxcB78IE",
+        dimmedColor: "rgba(8, 246, 111, .6)",
+        mainColor: "rgb(8, 246, 111)",
     },
     section2: {
-        name: "Another Project",
-        type: "MOBILE",
-        tools: "REACT NATIVE",
-        status: "IN PROGRESS",
-        duration: "6 MONTHS",
-        year: "2022",
-        description: "Description for another project. Lorem Ipsum continues here.",
-        url: "https://rogierdeboeve.com/spritexmarvel/",
-        dimmedColor: "rgba(198,0,0,.6)",
-        fullColor: "rgba(198,0,0,1)",
-        textColor: "pink"
+        name: "Movie LSTER",
+        type: "WEB",
+        tools: "HTML/CSS/JS",
+        status: "COMPLETED",
+        duration: "5 HRS",
+        year: "2024",
+        description: "Occaecat qui reprehenderit fugiat ea ea voluptate. Pariatur non occaecat incididunt exercitation ut culpa deserunt mollit magna deserunt consectetur elit et.",
+        url: "https://hblazerr.github.io/CSC256/Movie%20List/index.html",
+        dimmedColor: "rgba(171, 173, 177, .6)",
+        mainColor: "rgb(171, 173, 177)",
     },
     section3: {
-        name: "Third Project",
-        type: "DESKTOP",
-        tools: "ELECTRON",
-        status: "PLANNED",
-        duration: "1 YEAR",
+        name: "FairGame\u2122",
+        type: "RESPONSIVE",
+        tools: "VERCEL",
+        status: "IN PROGRESS",
+        duration: "20 HRS",
+        year: "2024",
+        description: "Commodo aliqua ipsum voluptate non. Et mollit ipsum esse duis et commodo amet cillum enim. Ad nisi dolor cillum nulla duis culpa. Qui cupidatat eu ad eiusmod labore anim elit occaecat adipisicing nostrud est sit aliqua adipisicing. ",
+        url: "https://fair-game.org",
+        dimmedColor: "rgba(222, 38, 38, .6)",
+        mainColor: "rgb(222, 38, 38)",
+    },
+    section4: {
+        name: "Meet Daniel",
+        type: "WEB",
+        tools: "HTML/CSS/JS",
+        status: "COMPLETED",
+        duration: "4 HRS",
+        year: "2024",
+        description: "Occaecat qui reprehenderit fugiat ea ea voluptate. Pariatur non occaecat incididunt exercitation ut culpa deserunt mollit magna deserunt consectetur elit et.",
+        url: "https://hblazerr.github.io/CSC256/Meet%20Daniel/index.html",
+        dimmedColor: "rgba(255, 255, 255, .6)",
+        mainColor: "rgb(255, 255, 255)",
+    },
+    section5: {
+        name: "Hearts Break Clothing",
+        type: "WEB",
+        tools: "HTML/CSS/JS",
+        status: "COMPLETED",
+        duration: "6 HRS",
         year: "2023",
-        description: "Details about the third project. Lorem Ipsum for placeholder.",
-        url: "https://cssgridgenerator.io/",
-        dimmedColor: "rgba(0,76,153,.6)",
-        fullColor: "rgba(0,76,153,1)",
-        textColor: "purple"
+        description: "Labore laborum reprehenderit velit incididunt adipisicing nulla aute ipsum ea incididunt aute. Voluptate magna exercitation velit dolor reprehenderit magna commodo eiusmod amet mollit.",
+        url: "https://hblazerr.github.io/CSC256/Movie%20List/index.html",
+        dimmedColor: "rgba(199, 58, 68, .6)",
+        mainColor: "rgb(199, 58, 68)",
     }
 };
 
@@ -76,12 +97,12 @@ function updateContent(index) {
 
     // Update CSS variables for colors
     document.documentElement.style.setProperty('--dimmed-color', data.dimmedColor);
-    document.documentElement.style.setProperty('--full-color', data.fullColor);
+    document.documentElement.style.setProperty('--full-color', data.mainColor);
 
     // Update text color
-    projectNameElement.style.color = data.textColor;
-    projectDescElement.style.color = data.textColor;
-    projectInfoElement.style.color = data.textColor;
+    projectNameElement.style.color = data.mainColor;
+    projectDescElement.style.color = data.mainColor;
+    projectInfoElement.style.color = data.mainColor;
 
     // Update View button link
     viewButton.onclick = function() {
