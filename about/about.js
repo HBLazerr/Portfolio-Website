@@ -60,10 +60,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     socialGrid.addEventListener('mouseleave', function () {
         clearInterval(socialGrid.timer); // STOP
-        socialIcon.className = `social-icon ${icons[0].iconClass}`; // Reset to first icon - 0 index
+        socialIcon.className = `social-icon ${icons[0].iconClass}`; // Reset to first icon (0 index)
         socialIcon.href = icons[0].link; // Reset link
     });
 });
+
+// List of project links - (from Meet Daniel Project)
+const projects = [
+    { name: 'Hearts Break Product Website', url: 'https://youtu.be/TxmiDwi8f_Q' },
+    { name: 'Fair Game', url: 'https://fair-game.org' },
+    { name: 'Rust Surveillance System', url: 'https://youtu.be/_MMuH-aQpq4' },
+    { name: 'WeatherDAN Website', url: '/projects/webProjects.html' },
+    { name: 'Meet Daniel', url: 'https://snack.expo.dev/@lazerr/meet-daniel' },
+    { name: 'RiMo-Universe', url: 'https://snack.expo.dev/@lazerr/github.com-hblazerr-rimo-universe' },
+    { name: 'Memory Lane', url: 'https://snack.expo.dev/@lazerr/memory-lane' },
+    { name: 'POA Mobile App', url: 'https://snack.expo.dev/@lazerr/phantom-operations-agency' }
+];
+
+// Shuffles the array
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+// Event listener for grid5 click
+document.querySelector('.grid5').addEventListener('click', function() {
+    shuffle(projects); // shuffles array
+    // now set random project from shuffled array
+    const randomProj = projects[0]; 
+    
+    // Get project link & assign to variable
+    const projLink = document.getElementById('project-link');
+
+    // Clear project link then set new link
+    projLink.innerHTML = '';
+    projLink.innerHTML = `<a href="${randomProj.url}" target="_blank">${randomProj.name}</a>`;
+});
+
 
 // Fullscreen Navigation Menu Function
 function toggleMenu() {

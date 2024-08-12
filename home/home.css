@@ -35,7 +35,7 @@ body {
     transition: transform 0.1s ease-out;
 }
 
-/* Explore Button Styles */
+
 .parallax h4 {
     font-weight: 200;
     letter-spacing: .25em;
@@ -49,22 +49,22 @@ a {
 }
 
 a:hover h4 {
-    color: ivory;
-    text-shadow: 0 0 5px #ffffff,
-        0 0 7px #ff0000,
-        0 0 12px #ff0000,
-        0 0 17px #ff0000,
-        0 0 27px #ff0000;
+    color: #f0fdff;
+    text-shadow: 0 0 5px #000000,
+        0 0 7px #667998,
+        0 0 12px #476dac,
+        0 0 17px #667998,
+        0 0 27px #426aac;
 }
 
 
-/* Full Name Styles */
 .full-name {
     font-family: "K2D", sans-serif;
     font-weight: 800;
     font-size: 9rem;
     margin-top: 0;
     color: ivory;
+    mix-blend-mode: difference;
 }
 
 .role {
