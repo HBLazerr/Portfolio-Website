@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Daniel Chavez | About</title>
+  </head>
+  <body>
+    <!-- Navbar - START -->
+    <nav class="navbar">
+      <a href="/home/home.html" class="logo">✧</a>
+
+      <button class="nav-menu" onclick="toggleMenu()">&#9776;</button>
+    </nav>
+    <!-- Navbar - END -->
+    <!-- Fullscreen Nav Menu - START -->
+    <div id="fullscreen-nav" class="fullscreen-nav">
+      <button class="close-btn" onclick="toggleMenu()">&times;</button>
+      <a href="/home/home.html" class="nav-link">HOME</a>
+      <a href="/projects/webProjects.html" class="nav-link">PROJECTS</a>
+      <a href="/about/about.html" class="nav-link">ABOUT</a>
+    </div>
+    <!-- Fullscreen Nav Menu - END -->
+
+    <div class="grid">
+      <div class="grid1" id="child-grid"></div>
+      <div class="grid2" id="child-grid">
+        <h1>Hi, I'm Daniel.</h1>
+        <p>Creative Developer seeking opportunity in mobile development, web development, and software development.</p>
+      </div>
+      <div class="grid3" id="child-grid">
+        <video src="/media/about/iBuildPCs.mp4" autoplay loop muted playsinline />
+      </div>
+      <div class="grid4" id="child-grid">
+        <a href="#" class="social-icon" target="_blank"></a>
+    </div>
+    
+      <div class="grid5" id="child-grid"></div>
+      <div class="grid6" id="child-grid"></div>
+      <div class="grid7" id="child-grid"></div>
+      <div class="grid8" id="child-grid">
+        <h1>4+</h1>
+        <p>Years of Experience</p>
+      </div>
+      <div class="grid9" id="child-grid">9</div>
+    </div>
+
+    <script src="about.js"></script>
+  </body>
+</html>

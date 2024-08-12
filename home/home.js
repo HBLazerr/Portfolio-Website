@@ -27,4 +27,3 @@ document.addEventListener('mousemove', (e) => {
     parallax.style.transform = `translate(${x}, ${y})`;
     body.style.backgroundPosition = _depth;
 });
-
