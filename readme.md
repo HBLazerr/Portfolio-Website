@@ -1,10 +1,11 @@
 # Daniel Chavez
 
-Simple intro will go here.
+Portfolio website which shows off projects and randomized insights of myself. Includes a landing page, website projects page, and an about page as of [2024-08-12].
 
-## Description
-
-Description will go here.
+## Future (Possible Expansion)
+* Add resume
+* Improve background and UI color palette
+* Add contact page
 
 ## Author
 
