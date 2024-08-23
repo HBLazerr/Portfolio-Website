@@ -13,6 +13,7 @@ html {
     box-sizing: border-box;
     height: 100%;
     font-family: "Kode Mono", monospace;
+    cursor: none;
 
     /* Hides scrollbar */
     scrollbar-width: none;
@@ -25,6 +26,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Custom Cursor Styles */
+.inner-cursor {
+    position: fixed;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255);
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width .5s, height .5s;
+}
+
+.inner-cursor.grow {
+    width: 37.5px;
+    height: 37.5px;
+    transition: width .5s, height .5s;
+}
+
+.outer-cursor {
+    position: fixed;
+    left: 10px;
+    width: 37.5px;
+    height: 37.5px;
+    transform: translate(-50%, -50%);
+    border: inset 1px solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 
@@ -239,7 +274,7 @@ body {
     padding: 20px 0;
 }
 
-.grid9:hover .logos-slide{
+.grid9:hover .logos-slide {
     animation-play-state: paused;
 }
 
@@ -262,6 +297,7 @@ body {
     from {
         transform: translateX(50%);
     }
+
     to {
         transform: translateX(-50%);
     }

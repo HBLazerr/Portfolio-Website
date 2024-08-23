@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     // For changing icons - this is like a counter
     let index = 0; // set to zero for first icon
-    
+
 
     // Change icons function
     function changeIcon() {
@@ -86,11 +86,11 @@ function shuffle(array) {
 }
 
 // Event listener for grid5 click
-document.querySelector('.grid5').addEventListener('click', function() {
+document.querySelector('.grid5').addEventListener('click', function () {
     shuffle(projects); // shuffles array
     // now set random project from shuffled array
-    const randomProj = projects[0]; 
-    
+    const randomProj = projects[0];
+
     // Get project link & assign to variable
     const projLink = document.getElementById('project-link');
 
@@ -129,3 +129,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+/* CUSTOM CURSOR FUNCTIONS */
+// Get cursor & hover elements from DOM
+let innerCursor = document.querySelector('.inner-cursor');
+let outerCursor = document.querySelector('.outer-cursor');
+let hoverMe = document.getElementById('hoverMe');
+
+// Create event listener for mouse movement
+document.addEventListener('mousemove', moveCursor);
+
+// Update position of inner n outer cursor based on mouse pos
+function moveCursor(e) {
+    // Get mouse pos
+    let x = e.clientX;
+    let y = e.clientY;
+
+    // Update pos of inner cursor
+    innerCursor.style.left = `${x}px`;
+    innerCursor.style.top = `${y}px`;
+
+    // Update pos of outer cursor
+    outerCursor.style.left = `${x}px`;
+    outerCursor.style.top = `${y}px`;
+}
+
+// Add 'grow' class to inner cursor on mouse hover
+// hoverMe = whichever element you want the cursor to expand on
+hoverMe.addEventListener('mouseover', () => {
+    innerCursor.classList.add('grow');
+})
+// Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
+hoverMe.addEventListener('mouseleave', () => {
+    innerCursor.classList.remove('grow');
+})

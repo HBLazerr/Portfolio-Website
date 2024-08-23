@@ -6,10 +6,13 @@
 html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     height: 100%;
+    width: 100%;
     font-family: "Kode Mono", monospace;
     font-weight: 100;
     color: #b9b9b9;
+    cursor: none;
 }
 
 body {
@@ -22,6 +25,41 @@ body {
     background: url("https://wallpapers.com/images/hd/dramatic-lightning-strike-in-4k-resolution-zv1zo4glzd6u3pb9.jpg") no-repeat center center fixed;
     background-size: 105%;
 }
+
+/* Custom Cursor Styles */
+.inner-cursor {
+    position: fixed;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255);
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width .5s, height .5s;
+    z-index: 9999;
+}
+
+.inner-cursor.grow {
+    width: 37.5px;
+    height: 37.5px;
+    transition: width .5s, height .5s;
+}
+
+.outer-cursor {
+    position: fixed;
+    left: 10px;
+    width: 37.5px;
+    height: 37.5px;
+    transform: translate(-50%, -50%);
+    border: inset 1px solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
 
 .container {
     text-align: center;
@@ -45,7 +83,8 @@ body {
 
 a {
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: none;
 }
 
 a:hover h4 {

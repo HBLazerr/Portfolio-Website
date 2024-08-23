@@ -2,7 +2,7 @@
 Parallax Effect
 - Handles mousemove event on landing page */
 document.addEventListener('mousemove', (e) => {
-    // Get 'parallax' & body elements from the DOM
+    // Get 'parallax' & body elements from DOM
     const parallax = document.querySelector('.parallax');
     const body = document.body;
 
@@ -27,3 +27,39 @@ document.addEventListener('mousemove', (e) => {
     parallax.style.transform = `translate(${x}, ${y})`;
     body.style.backgroundPosition = _depth;
 });
+
+
+
+/* CUSTOM CURSOR FUNCTIONS */
+// Get cursor & hover elements from DOM
+let innerCursor = document.querySelector('.inner-cursor');
+let outerCursor = document.querySelector('.outer-cursor');
+let hoverMe = document.querySelector('.parallax');
+
+// Create event listener for mouse movement
+document.addEventListener('mousemove', moveCursor);
+
+// Update position of inner n outer cursor based on mouse pos
+function moveCursor(e) {
+    // Get mouse pos
+    let x = e.clientX;
+    let y = e.clientY;
+
+    // Update pos of inner cursor
+    innerCursor.style.left = `${x}px`;
+    innerCursor.style.top = `${y}px`;
+
+    // Update pos of outer cursor
+    outerCursor.style.left = `${x}px`;
+    outerCursor.style.top = `${y}px`;
+}
+
+// Add 'grow' class to inner cursor on mouse hover
+// hoverMe = whichever element you want the cursor to expand on
+hoverMe.addEventListener('mouseover', () => {
+    innerCursor.classList.add('grow');
+})
+// Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
+hoverMe.addEventListener('mouseleave', () => {
+    innerCursor.classList.remove('grow');
+})

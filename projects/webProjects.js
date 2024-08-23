@@ -175,10 +175,46 @@ document.addEventListener("DOMContentLoaded", function () {
             // This way class will be marked as active
             link.classList.add('active');
             link.setAttribute('aria-disabled', 'true');
-            
+
             // Disable text selection & show as grey
             link.style.userSelect = 'none';
             link.style.color = 'grey';
         }
     });
 });
+
+
+
+/* CUSTOM CURSOR FUNCTIONS */
+// Get cursor & hover elements from DOM
+let innerCursor = document.querySelector('.inner-cursor');
+let outerCursor = document.querySelector('.outer-cursor');
+let hoverMe = document.getElementById('hoverMe');
+
+// Create event listener for mouse movement
+document.addEventListener('mousemove', moveCursor);
+
+// Update position of inner n outer cursor based on mouse pos
+function moveCursor(e) {
+    // Get mouse pos
+    let x = e.clientX;
+    let y = e.clientY;
+
+    // Update pos of inner cursor
+    innerCursor.style.left = `${x}px`;
+    innerCursor.style.top = `${y}px`;
+
+    // Update pos of outer cursor
+    outerCursor.style.left = `${x}px`;
+    outerCursor.style.top = `${y}px`;
+}
+
+// Add 'grow' class to inner cursor on mouse hover
+// hoverMe = whichever element you want the cursor to expand on
+hoverMe.addEventListener('mouseover', () => {
+    innerCursor.classList.add('grow');
+})
+// Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
+hoverMe.addEventListener('mouseleave', () => {
+    innerCursor.classList.remove('grow');
+})

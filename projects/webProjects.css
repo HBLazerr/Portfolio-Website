@@ -9,6 +9,7 @@ html {
     height: 100%;
     overflow: hidden;
     font-family: "Kode Mono", monospace;
+    cursor: none;
 }
 
 :root {
@@ -22,6 +23,41 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* Custom Cursor Styles */
+.inner-cursor {
+    position: fixed;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255);
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width .5s, height .5s;
+}
+
+.inner-cursor.grow {
+    width: 37.5px;
+    height: 37.5px;
+    transition: width .5s, height .5s;
+}
+
+.outer-cursor {
+    position: fixed;
+    left: 10px;
+    width: 37.5px;
+    height: 37.5px;
+    transform: translate(-50%, -50%);
+    border: inset 1px solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
 
 .container {
     height: 100vh;
@@ -245,6 +281,7 @@ label {
     cursor: pointer;
     padding: 15px 22px;
 }
+
 /* Navbar - END */
 
 /* Nav Menu - START */
@@ -295,4 +332,5 @@ label {
     pointer-events: none;
     text-decoration: none;
 }
+
 /* Nav Menu - END */

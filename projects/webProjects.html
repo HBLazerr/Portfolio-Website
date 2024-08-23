@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="webProjects.css" />
-    
+
     <title>Daniel Chavez | Web Projects</title>
   </head>
 
@@ -31,11 +31,11 @@
 
     <!-- Indicators for sections -->
     <div class="carousel-indicator">
-      <div class="indicator active" data-section="section1"></div>
-      <div class="indicator" data-section="section2"></div>
-      <div class="indicator" data-section="section3"></div>
-      <div class="indicator" data-section="section4"></div>
-      <div class="indicator" data-section="section5"></div>
+      <div class="indicator active" data-section="section1" id="hoverMe"></div>
+      <div class="indicator" data-section="section2" id="hoverMe"></div>
+      <div class="indicator" data-section="section3" id="hoverMe"></div>
+      <div class="indicator" data-section="section4" id="hoverMe"></div>
+      <div class="indicator" data-section="section5" id="hoverMe"></div>
     </div>
 
     <div class="container">
@@ -73,7 +73,7 @@
             </div>
           </div>
 
-          <div class="project-button">
+          <div class="project-button" id="hoverMe">
             <button class="view-button">VIEW LIVE</button>
           </div>
           <!-- Fixed Content - END -->
@@ -119,6 +119,10 @@
         </div>
       </div>
     </div>
+
+    <div class="inner-cursor"></div>
+    <div class="outer-cursor"></div>
+
     <script src="webProjects.js"></script>
   </body>
 </html>
