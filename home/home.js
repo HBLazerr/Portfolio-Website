@@ -2,6 +2,9 @@
 Parallax Effect
 - Handles mousemove event on landing page */
 document.addEventListener('mousemove', (e) => {
+    innerCursor.style.display = 'block';
+    outerCursor.style.display = 'block';
+
     // Get 'parallax' & body elements from DOM
     const parallax = document.querySelector('.parallax');
     const body = document.body;
@@ -29,12 +32,11 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
-
 /* CUSTOM CURSOR FUNCTIONS */
 // Get cursor & hover elements from DOM
 let innerCursor = document.querySelector('.inner-cursor');
 let outerCursor = document.querySelector('.outer-cursor');
-let hoverMe = document.querySelector('.parallax');
+let hoverElements = document.querySelectorAll('.hoverMe');
 
 // Create event listener for mouse movement
 document.addEventListener('mousemove', moveCursor);
@@ -54,12 +56,28 @@ function moveCursor(e) {
     outerCursor.style.top = `${y}px`;
 }
 
-// Add 'grow' class to inner cursor on mouse hover
-// hoverMe = whichever element you want the cursor to expand on
-hoverMe.addEventListener('mouseover', () => {
-    innerCursor.classList.add('grow');
-})
-// Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
-hoverMe.addEventListener('mouseleave', () => {
-    innerCursor.classList.remove('grow');
-})
+// For each element with class 'hoverMe', add event listeners
+// to grow and shrink inner cursor on mouseover and leave
+hoverElements.forEach(element => {
+    element.style.cursor = 'none';
+
+    // Add 'grow' class to inner cursor on mouse hover
+    element.addEventListener('mouseover', () => {
+        innerCursor.classList.add('grow');
+    });
+    // Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
+    element.addEventListener('mouseleave', () => {
+        innerCursor.classList.remove('grow');
+    });
+});
+
+// Remove custom cursor when mouse leaves viewport
+document.addEventListener('mouseleave', () => {
+    innerCursor.style.display = 'none';
+    outerCursor.style.display = 'none';
+});
+// Show custom cursor when mouse enters viewport
+document.addEventListener('mouseenter', () => {
+    innerCursor.style.display = 'block';
+    outerCursor.style.display = 'block';
+});

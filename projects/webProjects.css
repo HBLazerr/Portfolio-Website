@@ -31,11 +31,10 @@ body {
     width: 15px;
     height: 15px;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255);
-    mix-blend-mode: difference;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 1000;
     transition: width .5s, height .5s;
 }
 
@@ -43,6 +42,7 @@ body {
     width: 37.5px;
     height: 37.5px;
     transition: width .5s, height .5s;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .outer-cursor {
@@ -51,13 +51,10 @@ body {
     width: 37.5px;
     height: 37.5px;
     transform: translate(-50%, -50%);
-    border: inset 1px solid #fff;
-    mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 1000;
 }
-
 
 .container {
     height: 100vh;
@@ -89,7 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 1000;
+    z-index: 998;
 }
 
 .indicator {
@@ -98,7 +95,6 @@ body {
     background-color: #ccc;
     border-radius: 50%;
     transition: background-color 0.3s;
-    cursor: pointer;
 }
 
 .indicator.active {
@@ -118,7 +114,7 @@ body {
     grid-row: span 2 / span 2;
 
     position: fixed;
-    z-index: 1000;
+    z-index: 997;
     pointer-events: none;
     user-select: none;
 }
@@ -134,7 +130,7 @@ body {
     grid-row-start: 3;
 
     position: fixed;
-    z-index: 1000;
+    z-index: 997;
     pointer-events: none;
     user-select: none;
 
@@ -158,7 +154,7 @@ body {
     width: 45vw;
 
     position: fixed;
-    z-index: 1000;
+    z-index: 997;
     pointer-events: none;
     user-select: none;
 }
@@ -182,7 +178,7 @@ label {
     grid-row-start: 5;
 
     position: fixed;
-    z-index: 1000;
+    z-index: 997;
 }
 
 .view-button {
@@ -191,7 +187,7 @@ label {
     background: none;
     border-radius: 1px;
     padding: 6px 16px;
-    cursor: pointer;
+    cursor: none;
 
     transition: all .3s ease-in-out;
 }
@@ -208,7 +204,7 @@ label {
     grid-row-start: 3;
 
     position: relative;
-    z-index: 1001;
+    z-index: 998;
 
     padding: 50px;
     border-radius: 15px;
@@ -223,27 +219,23 @@ label {
     user-select: none;
 }
 
-
+/* Project Image BG Gradients */
 #proImg1 {
     background: rgb(0, 89, 39);
     background: linear-gradient(160deg, rgba(0, 89, 39, 1) 0%, rgba(35, 35, 35, 1) 40%, rgba(0, 0, 0, 1) 100%);
 }
-
 #proImg2 {
     background: rgb(76, 13, 13);
     background: linear-gradient(180deg, rgba(76, 13, 13, 1) 0%, rgba(43, 46, 53, 1) 64%, rgba(193, 195, 198, 1) 100%);
 }
-
 #proImg3 {
     background: rgb(226, 222, 222);
     background: linear-gradient(90deg, rgba(226, 222, 222, 1) 0%, rgba(150, 144, 144, 1) 51%, rgba(223, 38, 38, 1) 100%);
 }
-
 #proImg4 {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(22, 35, 35, 1) 39%, rgba(17, 28, 28, 1) 100%);
 }
-
 #proImg5 {
     background: -webkit-linear-gradient(90deg, #000000, #404040, #000000);
     background: linear-gradient(90deg, #000000, #404040, #000000);
@@ -261,7 +253,7 @@ label {
     align-items: center;
     background: transparent;
     backdrop-filter: blur(40px);
-    z-index: 1010;
+    z-index: 999;
 
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 }
@@ -278,7 +270,6 @@ label {
     background: transparent;
     border: none;
     color: #b9b9b9;
-    cursor: pointer;
     padding: 15px 22px;
 }
 
@@ -294,7 +285,7 @@ label {
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(60px);
-    z-index: 1011;
+    z-index: 999;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -320,7 +311,6 @@ label {
     background: transparent;
     border: none;
     color: #b9b9b9;
-    cursor: pointer;
     padding: 9px 21px;
 
 }

@@ -96,7 +96,7 @@ document.querySelector('.grid5').addEventListener('click', function () {
 
     // Clear project link then set new link
     projLink.innerHTML = '';
-    projLink.innerHTML = `<a href="${randomProj.url}" target="_blank">${randomProj.name}</a>`;
+    projLink.innerHTML = `<a href="${randomProj.url}" target="_blank" class="hoverMe">${randomProj.name}</a>`;
 });
 
 
@@ -131,12 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 /* CUSTOM CURSOR FUNCTIONS */
 // Get cursor & hover elements from DOM
 let innerCursor = document.querySelector('.inner-cursor');
 let outerCursor = document.querySelector('.outer-cursor');
-let hoverMe = document.getElementById('hoverMe');
+let hoverElements = document.querySelectorAll('.hoverMe');
 
 // Create event listener for mouse movement
 document.addEventListener('mousemove', moveCursor);
@@ -156,12 +155,47 @@ function moveCursor(e) {
     outerCursor.style.top = `${y}px`;
 }
 
-// Add 'grow' class to inner cursor on mouse hover
-// hoverMe = whichever element you want the cursor to expand on
-hoverMe.addEventListener('mouseover', () => {
-    innerCursor.classList.add('grow');
-})
-// Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
-hoverMe.addEventListener('mouseleave', () => {
-    innerCursor.classList.remove('grow');
-})
+// For each element with class 'hoverMe', add event listeners
+// to grow and shrink inner cursor on mouseover and leave
+hoverElements.forEach(element => {
+    element.style.cursor = 'none';
+
+    // Add 'grow' class to inner cursor on mouse hover
+    element.addEventListener('mouseover', () => {
+        innerCursor.classList.add('grow');
+    });
+    // Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
+    element.addEventListener('mouseleave', () => {
+        innerCursor.classList.remove('grow');
+    });
+});
+
+// Remove custom cursor when mouse leaves viewport
+document.addEventListener('mouseleave', () => {
+    innerCursor.style.display = 'none';
+    outerCursor.style.display = 'none';
+});
+// Show custom cursor when mouse enters viewport
+document.addEventListener('mouseenter', () => {
+    innerCursor.style.display = 'block';
+    outerCursor.style.display = 'block';
+});
+
+
+/* Remove custom cursor when mouse leaves iframe.
+Adding this since custom cursor cannot be applied to iframes */
+
+// Get iframe element
+const iframe = document.querySelector('iframe');
+
+// Hide cursor when mouse enters iframe
+iframe.addEventListener('mouseover', () => {
+    innerCursor.style.display = 'none';
+    outerCursor.style.display = 'none';
+});
+
+// Show cursor when mouse leaves iframe
+iframe.addEventListener('mouseleave', () => {
+    innerCursor.style.display = 'block';
+    outerCursor.style.display = 'block';
+});

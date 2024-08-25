@@ -6,6 +6,7 @@
     --full-color: rgb(8, 246, 111);
 }
 
+
 body,
 html {
     margin: 0;
@@ -35,11 +36,10 @@ body {
     width: 15px;
     height: 15px;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255);
-    mix-blend-mode: difference;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 1000;
     transition: width .5s, height .5s;
 }
 
@@ -47,6 +47,7 @@ body {
     width: 37.5px;
     height: 37.5px;
     transition: width .5s, height .5s;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .outer-cursor {
@@ -55,13 +56,14 @@ body {
     width: 37.5px;
     height: 37.5px;
     transform: translate(-50%, -50%);
-    border: inset 1px solid #fff;
-    mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 1000;
 }
 
+a {
+    cursor: none;
+}
 
 .grid {
     display: grid;
@@ -176,6 +178,7 @@ body {
     user-select: none;
     padding: 10px;
     font-weight: bold;
+    cursor: none;
 }
 
 #project-link {
@@ -314,7 +317,7 @@ body {
     align-items: center;
     background: transparent;
     backdrop-filter: blur(40px);
-    z-index: 1010;
+    z-index: 999;
 
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 }
@@ -331,7 +334,6 @@ body {
     background: transparent;
     border: none;
     color: #b9b9b9;
-    cursor: pointer;
     padding: 15px 22px;
 }
 
@@ -347,7 +349,7 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(60px);
-    z-index: 1011;
+    z-index: 999;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -373,7 +375,6 @@ body {
     background: transparent;
     border: none;
     color: #b9b9b9;
-    cursor: pointer;
     padding: 9px 21px;
 
 }
