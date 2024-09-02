@@ -48,7 +48,7 @@ const sectionData = {
         type: "RESPONSIVE",
         tools: "VERCEL",
         status: "IN PROGRESS",
-        duration: "20 HRS",
+        duration: "32 HRS",
         year: "2024",
         description: "Commodo aliqua ipsum voluptate non. Et mollit ipsum esse duis et commodo amet cillum enim. Ad nisi dolor cillum nulla duis culpa. Qui cupidatat eu ad eiusmod labore anim elit occaecat adipisicing nostrud est sit aliqua adipisicing. ",
         url: "https://fair-game.org",

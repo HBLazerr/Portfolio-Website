@@ -181,6 +181,11 @@ document.addEventListener('mouseenter', () => {
     outerCursor.style.display = 'block';
 });
 
+window.addEventListener('load', () => {
+    innerCursor.style.display = 'block';
+    outerCursor.style.display = 'block';
+});
+
 
 /* Remove custom cursor when mouse leaves iframe.
 Adding this since custom cursor cannot be applied to iframes */

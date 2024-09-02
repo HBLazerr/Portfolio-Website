@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Daniel Chavez | Project Category</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100%;
+      overflow: hidden;
+      font-family: "Kode Mono", monospace;
+      cursor: none;
+    }
+
+    body {
+      background-image: url("/media/lightning.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /* Navbar - START */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      backdrop-filter: blur(40px);
+      z-index: 999;
+
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      color: #b9b9b9;
+      font-size: 24px;
+      text-decoration: none;
+      padding: 15px 22px;
+    }
+
+    .nav-menu {
+      font-size: 30px;
+      background: transparent;
+      border: none;
+      color: #b9b9b9;
+      padding: 15px 22px;
+    }
+
+    /* Navbar - END */
+
+    /* Nav Menu - START */
+    .fullscreen-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(60px);
+      z-index: 999;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      user-select: none;
+      font-family: "K2D", sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+    }
+
+    .fullscreen-nav a {
+      color: #161616;
+      font-size: 30px;
+      margin: 15px 0;
+      text-decoration: none;
+    }
+
+    .close-btn {
+      position: fixed;
+      align-self: flex-end;
+      top: 0;
+      font-size: 50px;
+      background: transparent;
+      border: none;
+      color: #b9b9b9;
+      padding: 9px 21px;
+    }
+
+    /* Disabled/Active Link Styles */
+    .active {
+      color: #b9b9b9;
+      cursor: default;
+      pointer-events: none;
+      text-decoration: none;
+    }
+    /* Nav Menu - END */
+
+    .wrapper {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      height: 600px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: start;
+    }
+
+    .card {
+      width: 100px;
+      background-size: cover;
+      border-radius: 10px;
+      /* REMEMBER TO SWAP FOR CUSTOM CURSOR ON HOVER ELEMENT */
+      /* cursor: pointer; */
+      overflow: hidden;
+      align-items: flex-end;
+      transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .card > .row {
+      color: red;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .card > .row > .icon {
+      background: #233;
+      color: blueviolet;
+      border-radius: 50%;
+      width: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+    }
+
+    .card > .row > .description {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+      height: 90px;
+      width: 550px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition-delay: 0.3s;
+      transition: all 0.3s ease;
+    }
+
+
+
+
+    
+    /* Custom Cursor Styles */
+    .inner-cursor {
+      position: fixed;
+      left: 10px;
+      width: 15px;
+      height: 15px;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1000;
+      transition: width 0.5s, height 0.5s;
+    }
+
+    .inner-cursor.grow {
+      width: 37.5px;
+      height: 37.5px;
+      transition: width 0.5s, height 0.5s;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .outer-cursor {
+      position: fixed;
+      left: 10px;
+      width: 37.5px;
+      height: 37.5px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+  </style>
+
+  <body>
+    <!-- Navbar - START -->
+    <nav class="navbar">
+      <a href="/home/home.html" class="logo hoverMe">✧</a>
+
+      <button class="nav-menu hoverMe" onclick="toggleMenu()">&#9776;</button>
+    </nav>
+    <!-- Navbar - END -->
+
+    <!-- Fullscreen Nav Menu - START -->
+    <div id="fullscreen-nav" class="fullscreen-nav">
+      <button class="close-btn hoverMe" onclick="toggleMenu()">&times;</button>
+      <a href="/home/home.html" class="nav-link hoverMe">HOME</a>
+      <a href="/projects/projects.html" class="nav-link">PROJECTS</a>
+      <a href="/about/about.html" class="nav-link hoverMe">ABOUT</a>
+    </div>
+    <!-- Fullscreen Nav Menu - END -->
+
+    <div class="wrapper">
+      <div class="container">
+        <input type="radio" name="slides" id="slide1" checked />
+        <label for="slide1" class="card hoverMe">
+          <div class="row">
+            <div class="icon">
+              1
+              <!-- 1 for now - MAKE THIS INTO AN ACTUAL ICON -->
+            </div>
+            <div class="description">
+              <h4>Winter</h4>
+              <p>Reprehenderit laborum in velit commodo.</p>
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slides" id="slide2" checked />
+        <label for="slide2" class="card hoverMe">
+          <div class="row">
+            <div class="icon">
+              2
+              <!-- 2 for now - MAKE THIS INTO AN ACTUAL ICON -->
+            </div>
+            <div class="description">
+              <h4>Summer</h4>
+              <p>Reprehenderit laborum in velit commodo.</p>
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slides" id="slide3" checked />
+        <label for="slide3" class="card hoverMe">
+          <div class="row">
+            <div class="icon">
+              3
+              <!-- 3 for now - MAKE THIS INTO AN ACTUAL ICON -->
+            </div>
+            <div class="description">
+              <h4>Fall</h4>
+              <p>Reprehenderit laborum in velit commodo.</p>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="inner-cursor"></div>
+    <div class="outer-cursor"></div>
+  </body>
+
+  <script>
+    // Fullscreen Navigation Menu Function
+    function toggleMenu() {
+      // Get the fullscreen navigation menu & toggle its display prop
+      const menu = document.getElementById("fullscreen-nav");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+
+    // This code runs when the DOM has finished loading
+    document.addEventListener("DOMContentLoaded", function () {
+      // Gets all elements with the class 'nav-link'
+      const links = document.querySelectorAll(".nav-link");
+      // Gets the current URL path
+      const currentURL = window.location.pathname;
+
+      // Loops through each 'nav-link' element
+      links.forEach((link) => {
+        // Eval if the 'href' of each 'nav-link' element matches current URL path
+        if (link.getAttribute("href") === currentURL) {
+          // If so, add class 'active' to the element
+          // This way class will be marked as active
+          link.classList.add("active");
+          link.setAttribute("aria-disabled", "true");
+
+          // Disable text selection & show as grey
+          link.style.userSelect = "none";
+          link.style.color = "grey";
+        }
+      });
+    });
+
+    /* CUSTOM CURSOR FUNCTIONS */
+    // Get cursor & hover elements from DOM
+    let innerCursor = document.querySelector(".inner-cursor");
+    let outerCursor = document.querySelector(".outer-cursor");
+    let hoverElements = document.querySelectorAll(".hoverMe");
+
+    // Create event listener for mouse movement
+    document.addEventListener("mousemove", moveCursor);
+
+    // Update position of inner n outer cursor based on mouse pos
+    function moveCursor(e) {
+      // Get mouse pos
+      let x = e.clientX;
+      let y = e.clientY;
+
+      // Update pos of inner cursor
+      innerCursor.style.left = `${x}px`;
+      innerCursor.style.top = `${y}px`;
+
+      // Update pos of outer cursor
+      outerCursor.style.left = `${x}px`;
+      outerCursor.style.top = `${y}px`;
+    }
+
+    // For each element with class 'hoverMe', add event listeners
+    // to grow and shrink inner cursor on mouseover and leave
+    hoverElements.forEach((element) => {
+      element.style.cursor = "none";
+
+      // Add 'grow' class to inner cursor on mouse hover
+      element.addEventListener("mouseover", () => {
+        innerCursor.classList.add("grow");
+      });
+      // Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
+      element.addEventListener("mouseleave", () => {
+        innerCursor.classList.remove("grow");
+      });
+    });
+
+    // Remove custom cursor when mouse leaves viewport
+    document.addEventListener("mouseleave", () => {
+      innerCursor.style.display = "none";
+      outerCursor.style.display = "none";
+    });
+
+    document.addEventListener("mouseenter", () => {
+      innerCursor.style.display = "block";
+      outerCursor.style.display = "block";
+    });
+
+    window.addEventListener("load", () => {
+      innerCursor.style.display = "block";
+      outerCursor.style.display = "block";
+    });
+  </script>
+</html>
