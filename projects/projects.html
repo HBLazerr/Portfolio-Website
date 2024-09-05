@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
+
     <title>Daniel Chavez | Project Category</title>
   </head>
 
@@ -124,27 +126,48 @@
     }
 
     .card {
-      width: 100px;
+      width: 200px;
       background-size: cover;
-      border-radius: 10px;
       /* REMEMBER TO SWAP FOR CUSTOM CURSOR ON HOVER ELEMENT */
       /* cursor: pointer; */
       overflow: hidden;
+
+      position: relative;
+
+      border-radius: 2rem; /* ####### */
+      margin: 0 10px;
+      display: flex;
       align-items: flex-end;
       transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
+    .card::before {
+      content: "";
+      position: absolute;
+      border-radius: 0px; /* ####### */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, black);
+      z-index: 0;
+      pointer-events: none;
+    }
+
     .card > .row {
-      color: red;
+      color: white;
       display: flex;
       flex-wrap: nowrap;
+      align-items: center;
+      z-index: 1;
     }
 
     .card > .row > .icon {
-      background: #233;
-      color: blueviolet;
+      background: #161616;
+      color: white;
       border-radius: 50%;
       width: 75px;
+      height: 75px; /* ####### */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -156,18 +179,51 @@
       justify-content: center;
       flex-direction: column;
       overflow: hidden;
-      height: 90px;
-      width: 550px;
+      height: 80px;
+      width: 520px;
       opacity: 0;
       transform: translateY(30px);
       transition-delay: 0.3s;
       transition: all 0.3s ease;
+      justify-content: center;
     }
 
+    .description p {
+      color: #b0b0ba; /* Change later */
+      margin: 5px;
+    }
 
+    .description h4 {
+      text-transform: uppercase;
+      margin: 5px;
+    }
 
+    input {
+      display: none;
+    }
 
-    
+    input:checked + label {
+      width: 700px;
+    }
+
+    input:checked + label .description {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .card[for="slide1"] {
+      background-image: url("../media/MeetDaniel.png");
+      /* CHANGE LATER */
+    }
+    .card[for="slide2"] {
+      background-image: url("../media/FairGame.png");
+      /* CHANGE LATER */
+    }
+    .card[for="slide3"] {
+      background-image: url("../media/WeatherDAN.png");
+      /* CHANGE LATER */
+    }
+
     /* Custom Cursor Styles */
     .inner-cursor {
       position: fixed;
@@ -221,7 +277,7 @@
 
     <div class="wrapper">
       <div class="container">
-        <input type="radio" name="slides" id="slide1" checked />
+        <input type="radio" name="slides" id="slide1" />
         <label for="slide1" class="card hoverMe">
           <div class="row">
             <div class="icon">
@@ -249,7 +305,7 @@
           </div>
         </label>
 
-        <input type="radio" name="slides" id="slide3" checked />
+        <input type="radio" name="slides" id="slide3" />
         <label for="slide3" class="card hoverMe">
           <div class="row">
             <div class="icon">
