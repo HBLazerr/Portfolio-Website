@@ -361,7 +361,7 @@ a {
 }
 
 .fullscreen-nav a {
-    color: #161616;
+    color: #353535;
     font-size: 30px;
     margin: 15px 0;
     text-decoration: none;
@@ -381,7 +381,7 @@ a {
 
 /* Disabled/Active Link Styles */
 .active {
-    color: #b9b9b9;
+    color: #ebebeb;
     cursor: default;
     pointer-events: none;
     text-decoration: none;

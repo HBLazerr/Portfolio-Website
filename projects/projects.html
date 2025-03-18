@@ -144,7 +144,7 @@
     .card::before {
       content: "";
       position: absolute;
-      border-radius: 0px; /* ####### */
+      border-radius: 0; /* ####### */
       top: 0;
       left: 0;
       width: 100%;
@@ -270,8 +270,11 @@
     <div id="fullscreen-nav" class="fullscreen-nav">
       <button class="close-btn hoverMe" onclick="toggleMenu()">&times;</button>
       <a href="/home/home.html" class="nav-link hoverMe">HOME</a>
+      <a href="/objectives/objectives.html" class="nav-link hoverMe">OBJECTIVES</a>
       <a href="/projects/projects.html" class="nav-link">PROJECTS</a>
+      <a href="/about/about.html" class="nav-link hoverMe">RESUME</a>
       <a href="/about/about.html" class="nav-link hoverMe">ABOUT</a>
+      <a href="/about/about.html" class="nav-link hoverMe">CONTACT</a>
     </div>
     <!-- Fullscreen Nav Menu - END -->
 
@@ -285,7 +288,7 @@
               <!-- 1 for now - MAKE THIS INTO AN ACTUAL ICON -->
             </div>
             <div class="description">
-              <h4>Winter</h4>
+              <h4>Mobile Apps</h4>
               <p>Reprehenderit laborum in velit commodo.</p>
             </div>
           </div>
@@ -299,7 +302,7 @@
               <!-- 2 for now - MAKE THIS INTO AN ACTUAL ICON -->
             </div>
             <div class="description">
-              <h4>Summer</h4>
+              <h4>Websites</h4>
               <p>Reprehenderit laborum in velit commodo.</p>
             </div>
           </div>
@@ -313,7 +316,7 @@
               <!-- 3 for now - MAKE THIS INTO AN ACTUAL ICON -->
             </div>
             <div class="description">
-              <h4>Fall</h4>
+              <h4>Software Applications</h4>  
               <p>Reprehenderit laborum in velit commodo.</p>
             </div>
           </div>
@@ -352,7 +355,7 @@
 
           // Disable text selection & show as grey
           link.style.userSelect = "none";
-          link.style.color = "grey";
+          link.style.color = "#b9b9b9";
         }
       });
     });

@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Disable text selection & show as grey
             link.style.userSelect = 'none';
-            link.style.color = 'grey';
+            link.style.color = '#ebebeb'; 
         }
     });
 });
