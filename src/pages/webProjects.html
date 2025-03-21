@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="webProjects.css" />
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/src/css/webProjects.css" />
 
     <title>Daniel Chavez | Web Projects</title>
   </head>
@@ -13,7 +13,7 @@
   <body>
     <!-- Navbar - START -->
     <nav class="navbar">
-      <a href="/home/home.html" class="logo hoverMe">✧</a>
+      <a href="/src/pages/home.html" class="logo hoverMe">✧</a>
 
       <button class="nav-menu hoverMe" onclick="toggleMenu()">&#9776;</button>
     </nav>
@@ -22,12 +22,12 @@
     <!-- Fullscreen Nav Menu - START -->
     <div id="fullscreen-nav" class="fullscreen-nav">
       <button class="close-btn hoverMe" onclick="toggleMenu()">&times;</button>
-      <a href="/home/home.html" class="nav-link hoverMe">HOME</a>
-      <a href="/objectives/objectives.html" class="nav-link hoverMe">OBJECTIVES</a>
-      <a href="/projects/projects.html" class="nav-link hoverMe">PROJECTS</a>
-      <a href="/about/about.html" class="nav-link hoverMe">RESUME</a>
-      <a href="/about/about.html" class="nav-link hoverMe">ABOUT</a>
-      <a href="/about/about.html" class="nav-link hoverMe">CONTACT</a>
+      <a href="/src/pages/home.html" class="nav-link hoverMe">HOME</a>
+      <a href="/src/pages/objectives.html" class="nav-link hoverMe">OBJECTIVES</a>
+      <a href="/src/pages/projects.html" class="nav-link hoverMe">PROJECTS</a>
+      <a href="/src/pages/resume.html" class="nav-link hoverMe">RESUME</a>
+      <a href="/src/pages/about.html" class="nav-link hoverMe">ABOUT</a>
+      <a href="/src/pages/contact.html" class="nav-link hoverMe">CONTACT</a>
     </div>
     <!-- Fullscreen Nav Menu - END -->
 
@@ -79,9 +79,8 @@
             <button class="view-button">VIEW LIVE</button>
           </div>
           <!-- Fixed Content - END -->
-
           <div class="project-image" id="proImg1">
-            <img src="/media/WeatherDAN.png" alt="Weather Dan Project" />
+            <img src="/public/media/WeatherDAN.png" alt="Weather Dan Project" />
           </div>
         </div>
       </div>
@@ -89,7 +88,7 @@
       <div class="section" id="section2">
         <div class="content">
           <div class="project-image" id="proImg2">
-            <img src="/media/MovieLSTER.png" alt="Movie Lister Project" />
+            <img src="/public/media/MovieLSTER.png" alt="Movie Lister Project" />
           </div>
         </div>
       </div>
@@ -97,7 +96,7 @@
       <div class="section" id="section3">
         <div class="content">
           <div class="project-image" id="proImg3">
-            <img src="/media/FairGame.png" alt="Fair Game Project" />
+            <img src="/public/media/FairGame.png" alt="Fair Game Project" />
           </div>
         </div>
       </div>
@@ -105,7 +104,7 @@
       <div class="section" id="section4">
         <div class="content">
           <div class="project-image" id="proImg4">
-            <img src="/media/MeetDaniel.png" alt="Meet Daniel Project" />
+            <img src="/public/media/MeetDaniel.png" alt="Meet Daniel Project" />
           </div>
         </div>
       </div>
@@ -114,7 +113,7 @@
         <div class="content">
           <div class="project-image" id="proImg5">
             <img
-              src="/media/HeartsBreakClothing.png"
+              src="/public/media/HeartsBreakClothing.png"
               alt="Hearts Break Clothing Project"
             />
           </div>
@@ -125,6 +124,6 @@
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
 
-    <script src="webProjects.js"></script>
+    <script src="/src/js/webProjects.js"></script>
   </body>
 </html>

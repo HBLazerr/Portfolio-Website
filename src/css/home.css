@@ -12,6 +12,9 @@ html, body {
     font-weight: 100;
     color: #b9b9b9;
     cursor: none;
+
+    background: url("/public/media/lightning.jpeg") no-repeat center bottom fixed;
+    background-size: 105%;
 }
 
 body {
@@ -20,9 +23,6 @@ body {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-
-    background: url("https://wallpapers.com/images/hd/dramatic-lightning-strike-in-4k-resolution-zv1zo4glzd6u3pb9.jpg") no-repeat center center fixed;
-    background-size: 105%;
 }
 
 /* Custom Cursor Styles */
@@ -85,11 +85,12 @@ a {
 
 a:hover h4 {
     color: #f0fdff;
-    text-shadow: 0 0 5px #000000,
-        0 0 7px #667998,
-        0 0 12px #476dac,
-        0 0 17px #667998,
-        0 0 27px #426aac;
+    text-shadow: 0 0 20px #000000,
+        0 0 30px #7dff6e,
+        0 0 40px #3e8e41,
+        0 0 50px #6bff8e,
+        0 0 70px #2e6c31,
+        0 0 100px #2e8b57;
 }
 
 

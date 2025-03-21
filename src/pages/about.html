@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="/src/css/about.css" />
 
     <title>Daniel Chavez | About</title>
   </head>
   <body>
     <!-- Navbar - START -->
     <nav class="navbar">
-      <a href="/home/home.html" class="logo hoverMe">✧</a>
+      <a href="/src/pages/home.html" class="logo hoverMe">✧</a>
 
       <button class="nav-menu hoverMe" onclick="toggleMenu()">&#9776;</button>
     </nav>
@@ -25,12 +25,12 @@
     <!-- Fullscreen Nav Menu - START -->
     <div id="fullscreen-nav" class="fullscreen-nav">
       <button class="close-btn hoverMe" onclick="toggleMenu()">&times;</button>
-      <a href="/home/home.html" class="nav-link hoverMe">HOME</a>
-      <a href="/objectives/objectives.html" class="nav-link hoverMe">OBJECTIVES</a>
-      <a href="/projects/projects.html" class="nav-link hoverMe">PROJECTS</a>
-      <a href="/resume/resume.html" class="nav-link hoverMe">RESUME</a>
-      <a href="/about/about.html" class="nav-link">ABOUT</a>
-      <a href="/contact/contact.html" class="nav-link hoverMe">CONTACT</a>
+      <a href="/src/pages/home.html" class="nav-link hoverMe">HOME</a>
+      <a href="/src/pages/objectives.html" class="nav-link hoverMe">OBJECTIVES</a>
+      <a href="/src/pages/projects.html" class="nav-link hoverMe">PROJECTS</a>
+      <a href="/src/pages/resume.html" class="nav-link hoverMe">RESUME</a>
+      <a href="/src/pages/about.html" class="nav-link">ABOUT</a>
+      <a href="/src/pages/contact.html" class="nav-link hoverMe">CONTACT</a>
     </div>
     <!-- Fullscreen Nav Menu - END -->
 
@@ -45,7 +45,7 @@
       </div>
       <div class="grid3" id="child-grid">
         <video
-          src="/media/about/iBuildPCs.mp4"
+          src="/public/media/iBuildPCs.mp4"
           autoplay
           loop
           muted
@@ -185,6 +185,6 @@
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
 
-    <script src="about.js"></script>
+    <script src="/src/js/about.js"></script>
   </body>
 </html>

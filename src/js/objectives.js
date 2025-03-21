@@ -46,26 +46,34 @@ let innerCursor = document.querySelector('.inner-cursor');
 let outerCursor = document.querySelector('.outer-cursor');
 let hoverElements = document.querySelectorAll('.hoverMe');
 
-// Create event listener for mouse movement
-document.addEventListener('mousemove', moveCursor);
+// Initially hide the custom cursor
+innerCursor.style.display = 'none';
+outerCursor.style.display = 'none';
 
-// Update position of inner n outer cursor based on mouse pos
-function moveCursor(e) {
-    // Get mouse pos
+// Create a flag to track if the cursor has moved
+let cursorMoved = false;
+
+// Event listener for mouse movement
+document.addEventListener('mousemove', (e) => {
+    // Show the custom cursor only after the first movement
+    if (!cursorMoved) {
+        innerCursor.style.display = 'block';
+        outerCursor.style.display = 'block';
+        cursorMoved = true; // Set the flag to true
+    }
+
+    // Update cursor positions
     let x = e.clientX;
     let y = e.clientY;
 
-    // Update pos of inner cursor
     innerCursor.style.left = `${x}px`;
     innerCursor.style.top = `${y}px`;
 
-    // Update pos of outer cursor
     outerCursor.style.left = `${x}px`;
     outerCursor.style.top = `${y}px`;
-}
+});
 
 // For each element with class 'hoverMe', add event listeners
-// to grow and shrink inner cursor on mouseover and leave
 hoverElements.forEach(element => {
     element.style.cursor = 'none';
 
@@ -73,7 +81,8 @@ hoverElements.forEach(element => {
     element.addEventListener('mouseover', () => {
         innerCursor.classList.add('grow');
     });
-    // Remove 'grow' class from inner cursor on mouse leave so that cursor does not stay 'enlarged'
+
+    // Remove 'grow' class from inner cursor on mouse leave
     element.addEventListener('mouseleave', () => {
         innerCursor.classList.remove('grow');
     });
@@ -85,12 +94,19 @@ document.addEventListener('mouseleave', () => {
     outerCursor.style.display = 'none';
 });
 
-document.addEventListener('mouseenter', () => {
+// Show custom cursor when mouse enters viewport
+document.addEventListener('mouseenter', (e) => {
+    // Show the custom cursor if the cursor is already in the frame
     innerCursor.style.display = 'block';
     outerCursor.style.display = 'block';
-});
 
-window.addEventListener('load', () => {
-    innerCursor.style.display = 'block';
-    outerCursor.style.display = 'block';
+    // Update cursor positions immediately
+    let x = e.clientX;
+    let y = e.clientY;
+
+    innerCursor.style.left = `${x}px`;
+    innerCursor.style.top = `${y}px`;
+
+    outerCursor.style.left = `${x}px`;
+    outerCursor.style.top = `${y}px`;
 });
