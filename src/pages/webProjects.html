@@ -5,31 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/src/css/global.css" />
     <link rel="stylesheet" href="/src/css/webProjects.css" />
 
     <title>Daniel Chavez | Web Projects</title>
   </head>
 
   <body>
-    <!-- Navbar - START -->
-    <nav class="navbar">
-      <a href="/src/pages/index.html" class="logo hoverMe">✧</a>
-
-      <button class="nav-menu hoverMe" onclick="toggleMenu()">&#9776;</button>
-    </nav>
-    <!-- Navbar - END -->
-
-    <!-- Fullscreen Nav Menu - START -->
-    <div id="fullscreen-nav" class="fullscreen-nav">
-      <button class="close-btn hoverMe" onclick="toggleMenu()">&times;</button>
-      <a href="/src/pages/index.html" class="nav-link hoverMe">HOME</a>
-      <a href="/src/pages/objectives.html" class="nav-link hoverMe">OBJECTIVES</a>
-      <a href="/src/pages/projects.html" class="nav-link hoverMe">PROJECTS</a>
-      <a href="/src/pages/resume.html" class="nav-link hoverMe">RESUME</a>
-      <a href="/src/pages/about.html" class="nav-link hoverMe">ABOUT</a>
-      <a href="/src/pages/contact.html" class="nav-link hoverMe">CONTACT</a>
-    </div>
-    <!-- Fullscreen Nav Menu - END -->
+    <!-- Dynamic Navbar Injection -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Indicators for sections -->
     <div class="carousel-indicator">
@@ -88,7 +73,10 @@
       <div class="section" id="section2">
         <div class="content">
           <div class="project-image" id="proImg2">
-            <img src="/public/media/MovieLSTER.png" alt="Movie Lister Project" />
+            <img
+              src="/public/media/MovieLSTER.png"
+              alt="Movie Lister Project"
+            />
           </div>
         </div>
       </div>
@@ -121,8 +109,17 @@
       </div>
     </div>
 
+    <!-- Custom Cursor -->
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
+
+    <script type="module">
+      import { injectNavbar } from "/src/js/navbar.js";
+      import { initCustomCursor } from "/src/js/customCursor.js";
+
+      initCustomCursor(); // Setup cursor + base hover binding
+      injectNavbar(); // Now handles its own hover binding inside
+    </script>
 
     <script src="/src/js/webProjects.js"></script>
   </body>

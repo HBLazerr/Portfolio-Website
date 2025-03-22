@@ -1,88 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/src/css/objectives.css">
+
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link rel="stylesheet" href="/src/css/objectives.css" />
 
     <title>Daniel Chavez | Boards Objectives</title>
-</head>
+  </head>
 
-<body>
-    <!-- Navbar - START -->
-    <nav class="navbar">
-        <a href="/src/pages/index.html" class="logo hoverMe">✧</a>
-  
-        <button class="nav-menu hoverMe" onclick="toggleMenu()">&#9776;</button>
-      </nav>
-      <!-- Navbar - END -->
-       
-      <!-- Fullscreen Nav Menu - START -->
-      <div id="fullscreen-nav" class="fullscreen-nav">
-        <button class="close-btn hoverMe" onclick="toggleMenu()">&times;</button>
-        <a href="/src/pages/index.html" class="nav-link hoverMe">HOME</a>
-        <a href="/src/pages/objectives.html" class="nav-link">OBJECTIVES</a>
-        <a href="/src/pages/projects.html" class="nav-link hoverMe">PROJECTS</a>
-        <a href="/src/pages/resume.html" class="nav-link hoverMe">RESUME</a>
-        <a href="/src/pages/about.html" class="nav-link hoverMe">ABOUT</a>
-        <a href="/src/pages/contact.html" class="nav-link hoverMe">CONTACT</a>
-      </div>
-      <!-- Fullscreen Nav Menu - END -->
-  
-      <!-- Custom Cursor -->
-    <div class="inner-cursor"></div>
-    <div class="outer-cursor"></div>
-
-
+  <body>
+    <!-- Dynamic Navbar Injection -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Boards Objective Section -->
     <section class="boards-objective">
-        <h1 class="title">BOARDS OBJECTIVES</h1>
-        <div class="objectives-container">
-            <div class="objective left">
-                <div class="content">
-                    <h2>1. Software Development Lifecycle</h2>
-                    <p>Follow a structured process to analyze, design, build, and test software solutions.</p>
-                </div>
-            </div>
-            <div class="objective right">
-                <div class="content">
-                    <h2>2. Multilingual Programming Proficiency</h2>
-                    <p>Develop software using multiple programming languages and environments.</p>
-                </div>
-            </div>
-            <div class="objective left">
-                <div class="content">
-                    <h2>3. Data-Driven Development</h2>
-                    <p>Implement solutions that utilize and process data effectively.</p>
-                </div>
-            </div>
-            <div class="objective right">
-                <div class="content">
-                    <h2>4. Cross-Platform & Embedded Systems</h2>
-                    <p>Design and build software for mobile, embedded, and multi-platform environments.</p>
-                </div>
-            </div>
-            <div class="objective left">
-                <div class="content">
-                    <h2>5. Industry-Standard Documentation</h2>
-                    <p>Plan and document software development using professional tools and methodologies.</p>
-                </div>
-            </div>
-            <div class="objective right">
-                <div class="content">
-                    <h2>6. Data Structures & Algorithms</h2>
-                    <p>Apply and analyze lists, trees, hash tables, graphs, sorting, and searching techniques in software solutions.</p>
-                </div>
-            </div>
+      <h1 class="title">BOARDS OBJECTIVES</h1>
+      <div class="objectives-container">
+        <div class="objective left">
+          <div class="content">
+            <h2>1. Software Development Lifecycle</h2>
+            <p>
+              Follow a structured process to analyze, design, build, and test
+              software solutions.
+            </p>
+          </div>
         </div>
+        <div class="objective right">
+          <div class="content">
+            <h2>2. Multilingual Programming Proficiency</h2>
+            <p>
+              Develop software using multiple programming languages and
+              environments.
+            </p>
+          </div>
+        </div>
+        <div class="objective left">
+          <div class="content">
+            <h2>3. Data-Driven Development</h2>
+            <p>
+              Implement solutions that utilize and process data effectively.
+            </p>
+          </div>
+        </div>
+        <div class="objective right">
+          <div class="content">
+            <h2>4. Cross-Platform & Embedded Systems</h2>
+            <p>
+              Design and build software for mobile, embedded, and multi-platform
+              environments.
+            </p>
+          </div>
+        </div>
+        <div class="objective left">
+          <div class="content">
+            <h2>5. Industry-Standard Documentation</h2>
+            <p>
+              Plan and document software development using professional tools
+              and methodologies.
+            </p>
+          </div>
+        </div>
+        <div class="objective right">
+          <div class="content">
+            <h2>6. Data Structures & Algorithms</h2>
+            <p>
+              Apply and analyze lists, trees, hash tables, graphs, sorting, and
+              searching techniques in software solutions.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Custom Cursor -->
+    <div class="inner-cursor"></div>
+    <div class="outer-cursor"></div>
 
-    <script src="/src/js/objectives.js"></script>
-</body>
+    <script type="module">
+      import { injectNavbar } from "/src/js/navbar.js";
+      import { initCustomCursor } from "/src/js/customCursor.js";
 
+      initCustomCursor(); // Setup cursor + base hover binding
+      injectNavbar(); // Now handles its own hover binding inside
+    </script>
+  </body>
 </html>

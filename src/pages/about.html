@@ -9,182 +9,179 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="stylesheet" href="/src/css/global.css" />
     <link rel="stylesheet" href="/src/css/about.css" />
 
     <title>Daniel Chavez | About</title>
   </head>
   <body>
-    <!-- Navbar - START -->
-    <nav class="navbar">
-      <a href="/src/pages/index.html" class="logo hoverMe">✧</a>
+    <!-- Dynamic Navbar Injection -->
+    <div id="navbar-placeholder"></div>
 
-      <button class="nav-menu hoverMe" onclick="toggleMenu()">&#9776;</button>
-    </nav>
-    <!-- Navbar - END -->
-     
-    <!-- Fullscreen Nav Menu - START -->
-    <div id="fullscreen-nav" class="fullscreen-nav">
-      <button class="close-btn hoverMe" onclick="toggleMenu()">&times;</button>
-      <a href="/src/pages/index.html" class="nav-link hoverMe">HOME</a>
-      <a href="/src/pages/objectives.html" class="nav-link hoverMe">OBJECTIVES</a>
-      <a href="/src/pages/projects.html" class="nav-link hoverMe">PROJECTS</a>
-      <a href="/src/pages/resume.html" class="nav-link hoverMe">RESUME</a>
-      <a href="/src/pages/about.html" class="nav-link">ABOUT</a>
-      <a href="/src/pages/contact.html" class="nav-link hoverMe">CONTACT</a>
-    </div>
-    <!-- Fullscreen Nav Menu - END -->
-
-    <div class="grid">
-      <div class="grid1" id="child-grid"></div>
-      <div class="grid2" id="child-grid">
-        <h1>Hi, I'm Daniel.</h1>
-        <p>
-          Creative Developer seeking opportunity in mobile development, web
-          development, and software development.
-        </p>
-      </div>
-      <div class="grid3" id="child-grid">
-        <video
-          src="/public/media/iBuildPCs.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
-      </div>
-      <div class="grid4" id="child-grid">
-        <a href="#" class="social-icon hoverMe" target="_blank"></a>
-      </div>
-      <div class="grid5" id="child-grid">
-        <label id="project-label">Random Project:</label>
-        <span id="project-link" class="hoverMe">.click()</span>
-      </div>
-      <div class="grid6" id="child-grid">
-        <h1>Computer Science (Sr.)</h1>
-      </div>
-      <div class="grid7" id="child-grid">
-        <iframe
-          class="spotify-iframe"
-          src="https://open.spotify.com/embed/playlist/6UVHmpWdjNHBPbo679F8Sv?utm_source=generator"
-          width="100%"
-          height="152"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </div>
-      <div class="grid8" id="child-grid">
-        <h1>4+</h1>
-        <p>Years of Experience</p>
-      </div>
-      <div class="grid9" id="child-grid">
-        <div class="logos-slide">
-          <img
-            src="https://img.icons8.com/?size=100&id=39854&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=12592&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=38272&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=FQlr_bFSqEdG&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=123609&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=H997wGMPVphe&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=w0gLt4XNjxKm&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=7hA5Ny9rDAmV&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=z4rRkXyviG3w&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=GaRO0SragvjM&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=55205&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=39856&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=9t5UEEYXq0ZS&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=55199&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=amXjtNWVYSKP&format=png&color=000000"
-          />
+    <!-- Main Content -->
+    <main class="center-wrapper">
+      <div class="grid">
+        <div class="grid1" id="child-grid"></div>
+        <div class="grid2" id="child-grid">
+          <h1>Hi, I'm Daniel.</h1>
+          <p>
+            Creative Developer seeking opportunity in mobile development, web
+            development, and software development.
+          </p>
         </div>
-        <div class="logos-slide">
-          <img
-            src="https://img.icons8.com/?size=100&id=39854&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=12592&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=38272&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=FQlr_bFSqEdG&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=123609&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=H997wGMPVphe&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=w0gLt4XNjxKm&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=7hA5Ny9rDAmV&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=z4rRkXyviG3w&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=GaRO0SragvjM&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=55205&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=39856&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=9t5UEEYXq0ZS&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=55199&format=png&color=000000"
-          />
-          <img
-            src="https://img.icons8.com/?size=100&id=amXjtNWVYSKP&format=png&color=000000"
-          />
+        <div class="grid3 hoverMe" id="child-grid">
+          <video
+            src="/public/media/iBuildPCs.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+        <div class="grid4 hoverMe" id="child-grid">
+          <a href="#" class="social-icon" target="_blank"></a>
+        </div>
+        <div class="grid5 hoverMe" id="child-grid">
+          <label id="project-label">Random Project:</label>
+          <span id="project-link">.click()</span>
+        </div>
+        <div class="grid6" id="child-grid">
+          <h1>Computer Science (Sr.)</h1>
+        </div>
+        <div class="grid7" id="child-grid">
+          <iframe
+            class="spotify-iframe"
+            src="https://open.spotify.com/embed/playlist/6UVHmpWdjNHBPbo679F8Sv?utm_source=generator"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="grid8" id="child-grid">
+          <h1>4+</h1>
+          <p>Years of Experience</p>
+        </div>
+        <div class="grid9" id="child-grid">
+          <div class="logos-slide">
+            <img
+              src="https://img.icons8.com/?size=100&id=39854&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=12592&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=38272&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=FQlr_bFSqEdG&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=123609&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=H997wGMPVphe&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=w0gLt4XNjxKm&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=7hA5Ny9rDAmV&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=z4rRkXyviG3w&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=GaRO0SragvjM&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=55205&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=39856&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=9t5UEEYXq0ZS&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=55199&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=amXjtNWVYSKP&format=png&color=000000"
+            />
+          </div>
+          <div class="logos-slide">
+            <img
+              src="https://img.icons8.com/?size=100&id=39854&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=12592&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=38272&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=FQlr_bFSqEdG&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=123609&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=H997wGMPVphe&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=w0gLt4XNjxKm&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=7hA5Ny9rDAmV&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=z4rRkXyviG3w&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=GaRO0SragvjM&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=55205&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=39856&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=9t5UEEYXq0ZS&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=55199&format=png&color=000000"
+            />
+            <img
+              src="https://img.icons8.com/?size=100&id=amXjtNWVYSKP&format=png&color=000000"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
+    <!-- Custom Cursor -->
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
 
-    <script src="/src/js/about.js"></script>
+    <script type="module">
+      import { injectNavbar } from "/src/js/navbar.js";
+      import { initCustomCursor } from "/src/js/customCursor.js";
+
+      initCustomCursor(); // Setup cursor + base hover binding
+      injectNavbar(); // Now handles its own hover binding inside
+    </script>
+
+    <!-- About Page Logic -->
+    <script type="module" src="/src/js/about.js"></script>
   </body>
 </html>
