@@ -6,75 +6,147 @@
 
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
 
+    <script
+      src="https://kit.fontawesome.com/f8afc3b767.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="/src/css/global.css" />
     <link rel="stylesheet" href="/src/css/objectives.css" />
 
-    <title>Daniel Chavez | Boards Objectives</title>
+    <title>Daniel Chavez | Objectives</title>
   </head>
 
   <body>
     <!-- Dynamic Navbar Injection -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Boards Objective Section -->
-    <section class="boards-objective">
-      <h1 class="title">BOARDS OBJECTIVES</h1>
-      <div class="objectives-container">
-        <div class="objective left">
-          <div class="content">
-            <h2>1. Software Development Lifecycle</h2>
-            <p>
-              Follow a structured process to analyze, design, build, and test
-              software solutions.
-            </p>
-          </div>
-        </div>
-        <div class="objective right">
-          <div class="content">
-            <h2>2. Multilingual Programming Proficiency</h2>
-            <p>
-              Develop software using multiple programming languages and
-              environments.
-            </p>
-          </div>
-        </div>
-        <div class="objective left">
-          <div class="content">
-            <h2>3. Data-Driven Development</h2>
-            <p>
-              Implement solutions that utilize and process data effectively.
-            </p>
-          </div>
-        </div>
-        <div class="objective right">
-          <div class="content">
-            <h2>4. Cross-Platform & Embedded Systems</h2>
-            <p>
-              Design and build software for mobile, embedded, and multi-platform
-              environments.
-            </p>
-          </div>
-        </div>
-        <div class="objective left">
-          <div class="content">
-            <h2>5. Industry-Standard Documentation</h2>
-            <p>
-              Plan and document software development using professional tools
-              and methodologies.
-            </p>
-          </div>
-        </div>
-        <div class="objective right">
-          <div class="content">
-            <h2>6. Data Structures & Algorithms</h2>
-            <p>
-              Apply and analyze lists, trees, hash tables, graphs, sorting, and
-              searching techniques in software solutions.
-            </p>
-          </div>
-        </div>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Objectives</h1>
       </div>
-    </section>
+
+      <div class="container">
+        <input type="radio" name="slides" id="slide1" />
+        <label
+          for="slide1"
+          class="card hoverMe"
+          data-link="/src/pages/portfolio.html?objective=1"
+        >
+          <div class="view-projects-text">VIEW PROJECTS</div>
+
+          <div class="row">
+            <div class="icon">1</div>
+            <div class="description">
+              <h4>Software Development Lifecycle</h4>
+              <p>
+                Follow a structured process to analyze, design, build, and test
+                software solutions.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slides" id="slide2" />
+        <label
+          for="slide2"
+          class="card hoverMe"
+          data-link="/src/pages/portfolio.html?objective=2"
+        >
+          <div class="view-projects-text">VIEW PROJECTS</div>
+
+          <div class="row">
+            <div class="icon">2</div>
+            <div class="description">
+              <h4>Multilingual Programming Proficiency</h4>
+              <p>
+                Develop software using multiple programming languages and
+                environments.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slides" id="slide3" checked />
+        <label
+          for="slide3"
+          class="card hoverMe"
+          data-link="/src/pages/portfolio.html?objective=3"
+        >
+          <div class="view-projects-text">VIEW PROJECTS</div>
+
+          <div class="row">
+            <div class="icon">3</div>
+            <div class="description">
+              <h4>Data-Driven Development</h4>
+              <p>
+                Implement solutions that utilize and process data effectively.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slides" id="slide4" />
+        <label
+          for="slide4"
+          class="card hoverMe"
+          data-link="/src/pages/portfolio.html?objective=4"
+        >
+          <div class="view-projects-text">VIEW PROJECTS</div>
+
+          <div class="row">
+            <div class="icon">4</div>
+            <div class="description">
+              <h4>Cross-Platform & Embedded Systems</h4>
+              <p>
+                Design and build software for mobile, embedded, and
+                multi-platform environments.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slides" id="slide5" />
+        <label
+          for="slide5"
+          class="card hoverMe"
+          data-link="/src/pages/portfolio.html?objective=5"
+        >
+          <div class="view-projects-text">VIEW PROJECTS</div>
+
+          <div class="row">
+            <div class="icon">5</div>
+            <div class="description">
+              <h4>Industry-Standard Documentation</h4>
+              <p>
+                Plan and document software development using professional tools
+                and methodologies.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <input type="radio" name="slides" id="slide6" />
+        <label
+          for="slide6"
+          class="card hoverMe"
+          data-link="/src/pages/portfolio.html?objective=6"
+        >
+          <div class="view-projects-text">VIEW PROJECTS</div>
+
+          <div class="row">
+            <div class="icon">6</div>
+            <div class="description">
+              <h4>Data Structures & Algorithms</h4>
+              <p>
+                Apply and analyze lists, trees, hash tables, graphs, sorting,
+                and searching techniques in software solutions.
+              </p>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
 
     <!-- Custom Cursor -->
     <div class="inner-cursor"></div>
@@ -87,5 +159,7 @@
       initCustomCursor(); // Setup cursor + base hover binding
       injectNavbar(); // Now handles its own hover binding inside
     </script>
+
+    <script src="/src/js/objectives.js"></script>
   </body>
 </html>

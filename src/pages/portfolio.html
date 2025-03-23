@@ -7,63 +7,88 @@
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="/src/css/global.css" />
-    <link rel="stylesheet" href="/src/css/webProjects.css" />
+    <link rel="stylesheet" href="/src/css/portfolio.css" />
 
-    <title>Daniel Chavez | Web Projects</title>
+    <title>Daniel Chavez | Portfolio</title>
   </head>
 
   <body>
     <!-- Dynamic Navbar Injection -->
     <div id="navbar-placeholder"></div>
 
+    <!-- Filter - START -->
+    <div id="filter-toggle" class="hoverMe">FILTER</div>
+    <div id="filter-panel">
+      <div class="filter-header">
+        <h4 class="filter-title">Add Filter</h4>
+        <div id="reset-filters" class="hoverMe" title="Reset Filters">
+          &#x21BB;
+        </div>
+      </div>
+      <div class="filter-tile hoverMe">WEB</div>
+      <div class="filter-tile hoverMe">MOBILE</div>
+      <div class="filter-tile hoverMe">SOFTWARE</div>
+      <div class="filter-tile hoverMe">OBJ. 1</div>
+      <div class="filter-tile hoverMe">OBJ. 2</div>
+      <div class="filter-tile hoverMe">OBJ. 3</div>
+      <div class="filter-tile hoverMe">OBJ. 4</div>
+      <div class="filter-tile hoverMe">OBJ. 5</div>
+      <div class="filter-tile hoverMe">OBJ. 6</div>
+    </div>
+    <!-- Filter - END -->
+
     <!-- Indicators for sections -->
     <div class="carousel-indicator">
-      <div class="indicator active hoverMe" data-section="section1"></div>
+      <div class="indicator hoverMe active" data-section="section1"></div>
       <div class="indicator hoverMe" data-section="section2"></div>
       <div class="indicator hoverMe" data-section="section3"></div>
       <div class="indicator hoverMe" data-section="section4"></div>
       <div class="indicator hoverMe" data-section="section5"></div>
     </div>
+    <div class="grid-wrapper">
+      <div class="grid-overlay">
+        <!-- Fixed Content - START -->
+        <div class="project-name">
+          <h1 id="name"></h1>
+        </div>
+
+        <div class="project-desc">
+          <p id="description"></p>
+        </div>
+
+        <div class="project-info">
+          <div class="info-item">
+            <label>TYPE:</label>
+            <span class="data" id="type"></span>
+          </div>
+          <div class="info-item">
+            <label>TOOLS:</label>
+            <span class="data" id="tools"></span>
+          </div>
+          <div class="info-item">
+            <label>STATUS:</label>
+            <span class="data" id="status"></span>
+          </div>
+          <div class="info-item">
+            <label>DURATION:</label>
+            <span class="data" id="duration"></span>
+          </div>
+          <div class="info-item">
+            <label>YEAR:</label>
+            <span class="data" id="year"></span>
+          </div>
+        </div>
+
+        <div class="project-button">
+          <button class="view-button hoverMe">VIEW LIVE</button>
+        </div>
+        <!-- Fixed Content - END -->
+      </div>
+    </div>
 
     <div class="container">
       <div class="section" id="section1">
         <div class="content">
-          <!-- Fixed Content - START -->
-          <div class="project-name">
-            <h1 id="name"></h1>
-          </div>
-
-          <div class="project-desc">
-            <p id="description"></p>
-          </div>
-
-          <div class="project-info">
-            <div class="info-item">
-              <label>TYPE:</label>
-              <span class="data" id="type"></span>
-            </div>
-            <div class="info-item">
-              <label>TOOLS:</label>
-              <span class="data" id="tools"></span>
-            </div>
-            <div class="info-item">
-              <label>STATUS:</label>
-              <span class="data" id="status"></span>
-            </div>
-            <div class="info-item">
-              <label>DURATION:</label>
-              <span class="data" id="duration"></span>
-            </div>
-            <div class="info-item">
-              <label>YEAR:</label>
-              <span class="data" id="year"></span>
-            </div>
-          </div>
-
-          <div class="project-button hoverMe">
-            <button class="view-button">VIEW LIVE</button>
-          </div>
-          <!-- Fixed Content - END -->
           <div class="project-image" id="proImg1">
             <img src="/public/media/WeatherDAN.png" alt="Weather Dan Project" />
           </div>
@@ -109,6 +134,10 @@
       </div>
     </div>
 
+
+    <!-- Centered No Results Message -->
+    <div id="center-no-results">No results. Please adjust filters.</div>
+
     <!-- Custom Cursor -->
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
@@ -121,6 +150,6 @@
       injectNavbar(); // Now handles its own hover binding inside
     </script>
 
-    <script src="/src/js/webProjects.js"></script>
+    <script type="module" src="/src/js/portfolio.js"></script>
   </body>
 </html>

@@ -28,12 +28,9 @@ body {
     transition: transform 0.1s ease-out;
 }
 
-
+/* no longer needed since we removed h4 from explore */
 .parallax h4 {
-    font-weight: 200;
-    letter-spacing: .25em;
-    color: #b9b9b9;
-    transition: all 0.3s ease-in-out;
+    display: none;
 }
 
 a {
@@ -42,17 +39,6 @@ a {
     cursor: none;
 }
 
-a:hover h4 {
-    color: #f0fdff;
-    text-shadow: 0 0 20px #000000,
-        0 0 30px #7dff6e,
-        0 0 40px #3e8e41,
-        0 0 50px #6bff8e,
-        0 0 70px #2e6c31,
-        0 0 100px #2e8b57;
-}
-
-
 .full-name {
     font-family: "K2D", sans-serif;
     font-weight: 800;
@@ -60,6 +46,9 @@ a:hover h4 {
     margin-top: 0;
     color: ivory;
     mix-blend-mode: difference;
+    text-shadow:
+    0 0 5px rgba(27, 253, 156, 0.2),
+    0 0 15px rgba(27, 253, 156, 0.15);
 }
 
 .role {
@@ -67,5 +56,45 @@ a:hover h4 {
     letter-spacing: .25em;
     font-size: 3rem;
     color: transparent;
-    -webkit-text-stroke: 1.5px #b9b9b9;
+
+    -webkit-text-stroke: 1.5px #098b51;
+}
+
+/* Custom Explore Button (from Uiverse by adamgiebl) */
+.explore-btn {
+    --green: #1BFD9C;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+    cursor: none;
+}
+
+.explore-btn:hover {
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.explore-btn::before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform 0.4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
+}
+
+.explore-btn:hover::before {
+    transform: translateX(15em);
 }

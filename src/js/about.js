@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: 'Hearts Break Product Website', url: 'https://youtu.be/TxmiDwi8f_Q' },
         { name: 'Fair Game', url: 'https://fair-game.org' },
         { name: 'Rust Surveillance System', url: 'https://youtu.be/_MMuH-aQpq4' },
-        { name: 'WeatherDAN Website', url: '/projects/webProjects.html' },
+        { name: 'WeatherDAN Website', url: '/src/pages/portfolio.html' },
         { name: 'Meet Daniel', url: 'https://snack.expo.dev/@lazerr/meet-daniel' },
         { name: 'RiMo-Universe', url: 'https://snack.expo.dev/@lazerr/github.com-hblazerr-rimo-universe' },
         { name: 'Memory Lane', url: 'https://snack.expo.dev/@lazerr/memory-lane' },
