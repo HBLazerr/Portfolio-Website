@@ -12,22 +12,21 @@ export function injectNavbar() {
 
             requestAnimationFrame(() => {
                 const currentURL = window.location.pathname;
+                const currentPage = currentURL.split('/').pop(); // get just 'about.html', etc.
                 const links = document.querySelectorAll('.nav-link');
 
-                // Highlight the current page link
                 links.forEach(link => {
-                    if (link.getAttribute('href') === currentURL) {
+                    const linkHref = link.getAttribute('href').split('/').pop();
+
+                    if (linkHref === currentPage) {
                         link.classList.add('active');
                         link.setAttribute('aria-disabled', 'true');
                         link.style.userSelect = 'none';
                         link.style.color = '#ebebeb';
-
-                        // Remove hoverMe from only the current page's link
-                        link.classList.remove('hoverMe');
+                        link.classList.remove('hoverMe'); // remove hover effect for current page
                     }
                 });
 
-                // Bind hoverMe behavior to remaining elements
                 bindHoverTargets();
             });
         })
