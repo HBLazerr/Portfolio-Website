@@ -1,7 +1,7 @@
-import { bindHoverTargets } from "/src/js/customCursor.js";
+import { bindHoverTargets } from "../js/customCursor.js";
 
 export function injectNavbar() {
-    fetch('/src/components/navbar.html')
+    fetch('../components/navbar.html')
         .then(res => {
             if (!res.ok) throw new Error(`Failed to fetch navbar.html: ${res.status}`);
             return res.text();

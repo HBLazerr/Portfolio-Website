@@ -6,8 +6,8 @@
 
     <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="/src/css/global.css" />
-    <link rel="stylesheet" href="/src/css/portfolio.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/portfolio.css" />
 
     <title>Daniel Chavez | Portfolio</title>
   </head>
@@ -143,13 +143,13 @@
     <div class="outer-cursor"></div>
 
     <script type="module">
-      import { injectNavbar } from "/src/js/navbar.js";
-      import { initCustomCursor } from "/src/js/customCursor.js";
+      import { injectNavbar } from "../js/navbar.js";
+      import { initCustomCursor } from "../js/customCursor.js";
 
       initCustomCursor(); // Setup cursor + base hover binding
       injectNavbar(); // Now handles its own hover binding inside
     </script>
 
-    <script type="module" src="/src/js/portfolio.js"></script>
+    <script type="module" src="../js/portfolio.js"></script>
   </body>
 </html>
