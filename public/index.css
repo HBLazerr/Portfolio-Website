@@ -18,6 +18,8 @@ body {
 
 .container {
     text-align: center;
+
+    user-select: none;
 }
 
 .parallax {
@@ -26,11 +28,6 @@ body {
     align-items: center;
     position: relative;
     transition: transform 0.1s ease-out;
-}
-
-/* no longer needed since we removed h4 from explore */
-.parallax h4 {
-    display: none;
 }
 
 a {
