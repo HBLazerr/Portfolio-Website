@@ -4,7 +4,7 @@ html, body {
     font-weight: 100;
     color: var(--off-white);
 
-    background: url("/public/media/lightning.jpeg") no-repeat center bottom fixed;
+    background: url("media/lightning.jpeg") no-repeat center bottom fixed;
     background-size: 105%;
 }
 
