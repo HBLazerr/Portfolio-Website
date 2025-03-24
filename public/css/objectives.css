@@ -12,7 +12,6 @@ html {
 }
 
 body {
-    background-image: url("/public/media/lightning.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
 }
