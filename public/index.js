@@ -1,4 +1,4 @@
-import { innerCursor, outerCursor } from '../src/js/customCursor.js';
+import { innerCursor, outerCursor } from '/public/src/js/customCursor.js';
 
 /* 
 Parallax Effect

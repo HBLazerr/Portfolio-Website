@@ -7,6 +7,8 @@ html {
     overflow: hidden;
     font-family: "Kode Mono", monospace;
     cursor: none;
+
+    user-select: none;
 }
 
 body {
@@ -97,6 +99,7 @@ body {
     transition-delay: 0.3s;
     transition: all 0.3s ease;
     justify-content: center;
+
 }
 
 .description p {
@@ -114,6 +117,7 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    user-select: none;
 }
 
 .header h1 {

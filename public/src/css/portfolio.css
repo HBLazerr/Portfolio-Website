@@ -101,8 +101,8 @@ body {
     position: fixed;
     top: 80px;
     left: 30px;
-    background-color: rgb(25, 25, 25);
-    color: #b9b9b9;
+    background-color: var(--dark-gray);
+    color: var(--off-white);
     font-weight: bold;
     padding: 10px 18px;
     border-radius: 10px;
@@ -114,14 +114,15 @@ body {
 
 #filter-toggle.active,
 #filter-toggle:hover {
-    background-color: #b9b9b9;
-    color: rgb(25, 25, 25);
+    background-color: var(--off-white);
+    color: var(--dark-gray);
 }
 
+/* When filters are active */
 #filter-toggle.active-filters {
-    background-color: #6bff8e3c;
-    color: #6bff8e;
-    border: 1px solid #6bff8e;
+    background-color: var(--primary-glow);
+    color: var(--primary);
+    border: 1px solid var(--primary);
 }
 
 
@@ -131,7 +132,7 @@ body {
     position: fixed;
     top: 130px;
     left: 30px;
-    background-color: rgb(25, 25, 25);
+    background-color: var(--dark-gray);
     padding: 15px;
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -155,7 +156,7 @@ body {
 .filter-title {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #b9b9b9;
+    color: var(--off-white);
     margin: 0;
     margin-right: 40px;
 }
@@ -164,18 +165,18 @@ body {
 #reset-filters {
     font-size: 1rem;
     padding: 5px 10px;
-    border: 1px dashed #b9b9b9;
+    border: 1px dashed var(--off-white);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
-    color: #b9b9b9;
-    background: rgb(20, 20, 20);
+    color: var(--off-white);
+    background: var(--gray);
 }
 
 #reset-filters:hover {
-    background-color: #6bff8e7a;
-    color: #6bff8e;
-    border-color: #6bff8e;
+    background-color: var(--primary-glow);
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 #center-no-results {
@@ -202,14 +203,14 @@ body {
 .filter-tile {
     width: 90px;
     height: 90px;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--gray);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.75rem;
     font-weight: 500;
-    color: #b9b9b9;
+    color: var(--off-white);
     transition: background-color 0.3s ease;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -217,14 +218,14 @@ body {
 }
 
 .filter-tile:hover {
-    background-color: #6bff8e3c;
-    color: #6bff8e;
+    background-color: var(--primary-glow);
+    color: var(--primary);
 }
 
 .filter-tile.selected {
-    border: 2px solid #6bff8e;
-    background-color: #1f1f1f;
-    color: #6bff8e;
+    border: 2px solid var(--primary);
+    background-color: var(--dark-gray);
+    color: var(--primary);
 }
 
 
@@ -264,13 +265,13 @@ body {
 .indicator {
     width: 15px;
     height: 15px;
-    background-color: #ccc;
+    background-color: var(--off-white);
     border-radius: 50%;
     transition: background-color 0.3s;
 }
 
 .indicator.active {
-    background-color: #333;
+    background-color: var(--gray);
 }
 
 .content {

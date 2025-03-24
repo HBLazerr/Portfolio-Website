@@ -120,3 +120,18 @@ export function observeHoverMeInjection() {
         observer.observe(target, { childList: true, subtree: true });
     }
 }
+
+// Do not display custom cursor when hovering over iframe
+const iframe = document.querySelector('iframe');
+
+if (iframe) {
+  iframe.addEventListener('mouseenter', () => {
+    document.querySelector('.outer-cursor').style.opacity = '0';
+    document.querySelector('.inner-cursor').style.opacity = '0';
+  });
+
+  iframe.addEventListener('mouseleave', () => {
+    document.querySelector('.outer-cursor').style.opacity = '1';
+    document.querySelector('.inner-cursor').style.opacity = '1';
+  });
+}

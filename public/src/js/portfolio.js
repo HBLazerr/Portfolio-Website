@@ -108,6 +108,9 @@ const normalizedObjective = selectedObjective ? `obj${selectedObjective}` : null
 
 if (normalizedObjective) {
     applyFilterByValue(normalizedObjective);
+
+    // Clean URL after using the param
+    window.history.replaceState({}, document.title, window.location.pathname);
 } else {
     rebuildSections(Object.values(projectData));
 }
