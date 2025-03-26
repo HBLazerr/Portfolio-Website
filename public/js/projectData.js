@@ -8,7 +8,7 @@ export const projectData = {
     year: "2024",
     description:
       "WeatherDAN is a minimal Node-based weather app that fetches real-time weather data by location using the OpenWeatherMap API. It includes hourly temperature breakdowns, animated cursor, and a clean UI layout.",
-    url: "https://youtu.be/PVRaxcB78IE",
+    url: "https://weather-dan.up.railway.app/",
     image: "../media/WeatherDAN.png",
     gradient:
       "linear-gradient(160deg, rgba(0, 89, 39, 1) 0%, rgba(35, 35, 35, 1) 40%, rgba(0, 0, 0, 1) 100%)",
