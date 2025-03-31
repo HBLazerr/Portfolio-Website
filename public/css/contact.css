@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 20px;
+    background-color: rgba(14, 14, 14, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.contact-card h1 {
+    font-family: "K2D", sans-serif;
+    color: var(--off-white);
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--off-white);
+}
+
+.input-pair {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input-pair input {
+    flex: 1;
+    min-width: 0;
+}
+
+input,
+textarea {
+    width: 96%;
+    background-color: var(--dark-gray);
+    border: 1px solid var(--gray);
+    color: var(--off-white);
+    padding: 12px;
+    border-radius: 6px;
+    font-family: "Kode Mono", monospace;
+    transition: border 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.required {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.submit-row {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--black);
+    font-weight: bold;
+    font-family: "K2D", sans-serif;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 0 10px var(--primary-glow);
+}
