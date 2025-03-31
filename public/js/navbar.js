@@ -40,3 +40,18 @@ window.toggleMenu = function () {
     const menu = document.getElementById('fullscreen-nav');
     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
 };
+
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const menu = document.getElementById('fullscreen-nav');
+        if (menu && menu.style.display === 'flex') {
+            menu.style.display = 'none';
+
+            // Blur the focused element (like a close button)
+            if (document.activeElement) {
+                document.activeElement.blur();
+            }
+        }
+    }
+});

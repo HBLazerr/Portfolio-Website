@@ -124,14 +124,13 @@ body, .hoverMe {
   color: var(--off-white);
   padding: 9px 21px;
   transition: all 0.3s ease-in-out;
-
 }
 
 /* Close button hover effect */
 .close-btn:hover {
   color: var(--gray-hover);
   transition: all 0.3s ease-in-out;
-}
+} */
 
 /* Disabled/Active Link Styles */
 .active {

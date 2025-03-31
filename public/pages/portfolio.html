@@ -66,8 +66,8 @@
             <span class="data" id="tools"></span>
           </div>
           <div class="info-item">
-            <label>STATUS:</label>
-            <span class="data" id="status"></span>
+            <label>OBJECTIVES:</label>
+            <span class="data" id="objectives"></span>
           </div>
           <div class="info-item">
             <label>DURATION:</label>
@@ -87,53 +87,29 @@
     </div>
 
     <div class="container">
-      <div class="section" id="section1">
-        <div class="content">
-          <div class="project-image" id="proImg1">
-            <img src="../media/WeatherDAN.png" alt="Weather Dan Project" />
-          </div>
-        </div>
-      </div>
+      <!-- Filled by rebuildSections JavaScript in portfolio.js -->
+    </div>
 
-      <div class="section" id="section2">
-        <div class="content">
-          <div class="project-image" id="proImg2">
-            <img
-              src="../media/MovieLSTER.png"
-              alt="Movie Lister Project"
-            />
-          </div>
-        </div>
-      </div>
+    <!-- Project Modal -->
+    <div id="project-modal" class="hidden">
+      <div class="modal-content">
+        <button class="close-button hoverMe">&times;</button>
 
-      <div class="section" id="section3">
-        <div class="content">
-          <div class="project-image" id="proImg3">
-            <img src="../media/FairGame.png" alt="Fair Game Project" />
-          </div>
-        </div>
-      </div>
+        <h2 id="modal-name"></h2>
+        <p><strong>Role:</strong> <span id="modal-role"></span></p>
+        <p>
+          <strong>Objectives Met:</strong> <span id="modal-objectives"></span>
+        </p>
 
-      <div class="section" id="section4">
-        <div class="content">
-          <div class="project-image" id="proImg4">
-            <img src="../media/MeetDaniel.png" alt="Meet Daniel Project" />
-          </div>
-        </div>
-      </div>
+        <div class="modal-section" id="modal-images"></div>
 
-      <div class="section" id="section5">
-        <div class="content">
-          <div class="project-image" id="proImg5">
-            <img
-              src="../media/HeartsBreakClothing.png"
-              alt="Hearts Break Clothing Project"
-            />
-          </div>
+        <div class="modal-buttons">
+          <button class="hoverMe" id="source-button">Source Code</button>
+          <button class="hoverMe" id="demo-button">Demo</button>
+          <button class="hoverMe" id="extras-button">Extras</button>
         </div>
       </div>
     </div>
-
 
     <!-- Centered No Results Message -->
     <div id="center-no-results">No results. Please adjust filters.</div>

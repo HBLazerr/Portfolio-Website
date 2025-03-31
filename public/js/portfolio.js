@@ -13,7 +13,7 @@ const centerNoResults = document.getElementById('center-no-results');
 const nameElement = document.getElementById('name');
 const typeElement = document.getElementById('type');
 const toolsElement = document.getElementById('tools');
-const statusElement = document.getElementById('status');
+const objectivesElement = document.getElementById('objectives');
 const durationElement = document.getElementById('duration');
 const yearElement = document.getElementById('year');
 const descriptionElement = document.getElementById('description');
@@ -21,6 +21,17 @@ const projectNameElement = document.querySelector('.project-name');
 const projectDescElement = document.querySelector('.project-desc');
 const projectInfoElement = document.querySelector('.project-info');
 const viewButton = document.querySelector('.view-button');
+
+// Modal DOM elements
+const modal = document.getElementById('project-modal');
+const modalName = document.getElementById('modal-name');
+const modalRole = document.getElementById('modal-role');
+const modalObjectives = document.getElementById('modal-objectives');
+const modalImages = document.getElementById('modal-images');
+const sourceBtn = document.getElementById('source-button');
+const demoBtn = document.getElementById('demo-button');
+const extrasBtn = document.getElementById('extras-button');
+
 
 const selectedFilters = new Set();
 const filterTiles = document.querySelectorAll('.filter-tile');
@@ -120,7 +131,10 @@ function updateContentFromProject(project) {
     nameElement.textContent = project.name;
     typeElement.textContent = project.type;
     toolsElement.textContent = project.tools;
-    statusElement.textContent = project.status;
+    objectivesElement.textContent = (project.objectives || [])
+        .map(obj => obj.replace(/obj/i, '').padStart(2, '0'))
+        .join(', ');
+
     durationElement.textContent = project.duration;
     yearElement.textContent = project.year;
     descriptionElement.textContent = project.description;
@@ -150,8 +164,9 @@ function matchesFilters(project) {
     const projectTypes = [project.type.toLowerCase()];
     const projectObjectives = project.objectives?.map(obj => obj.toLowerCase()) || [];
     const projectAttributes = [...projectTypes, ...projectObjectives];
-    return [...selectedFilters].every(filter => projectAttributes.includes(filter));
+    return [...selectedFilters].some(filter => projectAttributes.includes(filter));
 }
+
 
 //  Rebuild sections after filter
 function rebuildSections(filteredProjects) {
@@ -162,7 +177,7 @@ function rebuildSections(filteredProjects) {
         nameElement.textContent = '';
         typeElement.textContent = '';
         toolsElement.textContent = '';
-        statusElement.textContent = '';
+        objectivesElement.textContent = '';
         durationElement.textContent = '';
         yearElement.textContent = '';
         descriptionElement.textContent = '';
@@ -171,6 +186,7 @@ function rebuildSections(filteredProjects) {
         projectDescElement.classList.add('hidden');
         projectInfoElement.classList.add('hidden');
         document.querySelector('.project-button').classList.add('hidden');
+
 
         viewButton.onclick = null;
         centerNoResults.style.display = 'block';
@@ -194,13 +210,45 @@ function rebuildSections(filteredProjects) {
         content.className = 'content';
 
         const projectImage = document.createElement('div');
-        projectImage.className = 'project-image';
+        projectImage.className = 'project-image ';
         projectImage.id = `proImg${i + 1}`;
         projectImage.style.background = project.gradient;
 
         const img = document.createElement('img');
+        img.className = 'hoverMe';
         img.src = project.image;
         img.alt = project.name;
+
+
+        img.addEventListener('click', () => {
+
+            // Set basic info
+            modalName.textContent = project.name;
+            modalRole.textContent = project.role || 'Solo Developer';
+            modalObjectives.textContent = (project.objectives || [])
+                .map(obj => obj.replace(/obj/i, '').padStart(2, '0'))
+                .join(', ');
+
+
+            // Clear previous images
+            modalImages.innerHTML = '';
+            (project.screenshots || [project.image]).forEach(src => {
+                const imgEl = document.createElement('img');
+                imgEl.src = src;
+                imgEl.alt = project.name;
+                modalImages.appendChild(imgEl);
+            });
+
+            // Buttons
+            sourceBtn.onclick = () => window.open(project.source || '#', '_blank');
+            demoBtn.onclick = () => window.open(project.url || '#', '_blank');
+            extrasBtn.onclick = () => window.open(project.extra || '#', '_blank');
+
+            // Show the modal
+            modal.classList.remove('hidden');
+        });
+
+
 
         projectImage.appendChild(img);
         content.appendChild(projectImage);
@@ -239,3 +287,34 @@ document.addEventListener('click', (event) => {
         filterToggle.classList.remove('active');
     }
 });
+
+
+
+// Enable scroll from anywhere on the page when modal is hidden
+window.addEventListener('wheel', (e) => {
+    const modalIsHidden = modal.classList.contains('hidden');
+    if (modalIsHidden) {
+        e.preventDefault(); // stop default window scroll
+        container.scrollBy({
+            top: e.deltaY,
+            behavior: 'auto'
+        });
+    }
+}, { passive: false }); // passive false is needed to call preventDefault
+
+
+
+// Modal 
+// Close modal on click of X or outside
+document.querySelector('.close-button').addEventListener('click', () => {
+    document.getElementById('project-modal').classList.add('hidden');
+});
+
+document.getElementById('project-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'project-modal') {
+        e.target.classList.add('hidden');
+    }
+});
+
+
+
