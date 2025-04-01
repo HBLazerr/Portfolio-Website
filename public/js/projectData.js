@@ -69,7 +69,7 @@ export const projectData = {
     description: "A mobile self-improvement app built from scratch to support individuals through heartbreak using personalized tools and mental wellness features.",
     url: "https://youtu.be/a7s_K5p8KdI",
     image: "../media/HeartsBreak-screenshot2.png",
-    screenshots: ["../media/HeartsBreak-screenshot1.png", "../media/HeartsBreak-screenshot2.png", "../media/HeartsBreak-screenshot3.png", "../media/HB-problem-statement.png", "../media/HeartsBreak-screenshot4.jpg", "../media/HeartsBreak-screenshot5.jpg", "../media/HeartsBreak-screenshot6.jpg"],
+    screenshots: ["../media/HeartsBreak-screenshot1.png", "../media/HeartsBreak-screenshot2.png", "../media/HeartsBreak-screenshot3.png", "../media/HB-problem-statement.png", "../media/HeartsBreak-screenshot4.png", "../media/HeartsBreak-screenshot5.png", "../media/HeartsBreak-screenshot6.png"],
     role: "Developer and Designer",
     source: "https://snack.expo.dev/@lazerr/hearts-break?platform=ios",
     extra: "https://docs.google.com/document/d/1PVig2AcxE8CG4pxo-hu1PkPI9GV2Fgap-mNkQmoeHeI/edit?usp=sharing",
