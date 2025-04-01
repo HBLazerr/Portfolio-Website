@@ -185,12 +185,12 @@ input:checked+label .description {
 }
 
 .card[for="slide1"] {
-    background-image: url("../media/MeetDaniel.png");
+    background-image: url("../media/FairGame.png");
     /* CHANGE LATER */
 }
 
 .card[for="slide2"] {
-    background-image: url("../media/FairGame.png");
+    background-image: url("../media/lazerrs-player.png");
     /* CHANGE LATER */
 }
 
@@ -200,16 +200,16 @@ input:checked+label .description {
 }
 
 .card[for="slide4"] {
-    background-image: url("../media/MovieLSTER.png");
+    background-image: url("../media/HeartsBreak-screenshot1.png");
     /* CHANGE LATER */
 }
 
 .card[for="slide5"] {
-    background-image: url("../media/MeetDaniel.png");
+    background-image: url("../media/FairGame-screenshot3.png");
     /* CHANGE LATER */
 }
 
 .card[for="slide6"] {
-    background-image: url("../media/FairGame.png");
+    background-image: url("../media/MovieLSTER.png");
     /* CHANGE LATER */
 }

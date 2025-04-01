@@ -17,7 +17,7 @@ export const projectData = {
       "linear-gradient(90deg, rgba(226, 222, 222, 1) 0%, rgba(150, 144, 144, 1) 51%, rgba(223, 38, 38, 1) 100%)",
     mainColor: "rgb(222, 38, 38)",
     dimmedColor: "rgba(222, 38, 38, .6)",
-    objectives: ["obj1", "obj4"]
+    objectives: ["obj1", "obj4", "obj5"]
   },
 
   section2: {
@@ -36,7 +36,7 @@ export const projectData = {
     gradient: "linear-gradient(90deg, rgba(172, 60, 252, 1) 0%, rgba(51, 0, 102, 1) 50%, rgb(15, 15, 15) 100%)",
     mainColor: "rgb(172, 60, 252)",
     dimmedColor: "rgba(172, 60, 252, .6)",
-    objectives: ["obj2", "obj3", "obj5"]
+    objectives: ["obj2", "obj3"]
   },
 
   section3: {
@@ -118,6 +118,7 @@ export const projectData = {
     dimmedColor: "rgba(171, 173, 177, .6)",
     objectives: ["obj6"]
   },
+
   section7: {
     name: "Pokémon Data Analysis",
     type: "DATA",
