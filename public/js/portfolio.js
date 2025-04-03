@@ -221,14 +221,37 @@ function rebuildSections(filteredProjects) {
 
 
         img.addEventListener('click', () => {
-
-            // Set basic info
+            // Set the name
             modalName.textContent = project.name;
-            modalRole.textContent = project.role || 'Solo Developer';
-            modalObjectives.textContent = (project.objectives || [])
-                .map(obj => obj.replace(/obj/i, '').padStart(2, '0'))
-                .join(', ');
 
+            // Clear previous info content
+            const infoContainer = document.getElementById('modal-info');
+            infoContainer.innerHTML = '';
+
+            // Role
+            const roleEl = document.createElement('p');
+            roleEl.innerHTML = `<strong>Role:</strong> <span>${project.role || 'Solo Developer'}</span>`;
+            infoContainer.appendChild(roleEl);
+
+            // Objectives
+            const objEl = document.createElement('p');
+            objEl.innerHTML = `<strong>Objectives Met:</strong> <span>${(project.objectives || [])
+                .map(obj => obj.replace(/obj/i, '').padStart(2, '0'))
+                .join(', ')}</span>`;
+            infoContainer.appendChild(objEl);
+
+            // Extended tools list
+            const toolsEl = document.createElement('p');
+            toolsEl.innerHTML = `<strong>Tools:</strong> `;
+
+            if (Array.isArray(project.toolsList) && project.toolsList.length > 0) {
+                const toolSpans = project.toolsList.map(tool => `<span class="tool-badge">${tool}</span>`);
+                toolsEl.innerHTML += toolSpans.join(' ');
+            } else {
+                toolsEl.innerHTML += project.tools || 'N/A';
+            }
+
+            infoContainer.appendChild(toolsEl);
 
             // Clear previous images
             modalImages.innerHTML = '';
