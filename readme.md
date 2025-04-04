@@ -6,22 +6,22 @@ A personalized portfolio that showcases my creative development journey, project
 
 ---
 
-## 🎬 Version History
+## Version History
 
-### 🔹 v1 – Initial Build (August 2024)
+###  v1 – Initial Build (August 2024)
 - Basic portfolio website with scattered design elements
 - Placeholder project content including lorem ipsum descriptions
-- YouTube demo: [Watch original version](https://youtu.be/MPpPy4tND3g?si=fKZbvsQMMWfA9KRn)
+- YouTube demo: [Original version](https://youtu.be/MPpPy4tND3g?si=fKZbvsQMMWfA9KRn)
 
-### 🔹 v2 – Latest Version (2025)
+###  v2 – Latest Version (2025)
 - Fully custom-coded and responsive
 - Features:
   - HTML-injected minimal navigation bar with full screen navigation menu
   - Animated custom cursor and hover logic
   - Added project filtering and full-screen modals upon image click
   - Objectives page with applied filtering redirect to projects page 
-- ![Live Site](https://danny-chavez.com)
-- ![Latest Portfolio Preview](./media/portfolio-gif3.gif)
+- [Live Site](https://danny-chavez.com)
+- [Latest Portfolio Preview](media/portfolio-gif3.gif)
 
 ## Future (Possible Expansion)
 * Add Resume to About page
