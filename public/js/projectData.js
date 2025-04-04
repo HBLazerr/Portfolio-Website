@@ -180,21 +180,23 @@ export const projectData = {
     year: "2023",
     description:
       "A C++ console simulation where users create their own superheroes and assign them to factions. Demonstrates use of OOP, file I/O, sorting, searching, hash tables, and a graph with BFS traversal to show hero connections.",
-    url: "",
-    image: "../media/ascii-maze-screenshot1.png", // Screenshot of the opening intro or title screen
+    url: "https://youtu.be/z4-S3cHGnx4",
+    image: "../media/hero-creator-screenshot1.png",
     screenshots: [
-      "../media/hero-creator-screenshot2.png", // Screenshot of the menu options
-      "../media/hero-creator-screenshot3.png", // User creating a hunter
-      "../media/hero-creator-screenshot4.png", // Sorted hero list by name/level
-      "../media/hero-creator-screenshot5.png", // Searching for hero by name
-      "../media/hero-creator-screenshot6.png", // Screenshot of heroes.txt in Notepad showing saved data
-      "../media/hero-creator-screenshot7.png", // Exploring hero connections (BFS)
-      "../media/hero-creator-screenshot8.png", // Optional: image of heroGraph output (debug print)
-      "../media/hero-creator-screenshot9.png"  // Show factions and their members
+      "../media/hero-creator-screenshot2.png",
+      "../media/hero-creator-screenshot5.png",
+      "../media/hero-creator-screenshot3.png",
+      "../media/hero-creator-screenshot10.png",
+      "../media/hero-creator-screenshot4.png",
+      "../media/hero-creator-screenshot9.png",
+      "../media/hero-creator-screenshot6.png",
+      "../media/hero-creator-screenshot11.png",
+      "../media/hero-creator-screenshot8.png",
+      "../media/hero-creator-screenshot7.png",
     ],
     role: "Solo Developer",
     source: "https://github.com/HBLazerr/CSC275/tree/main/Hero%20Creator",
-    extra: "", // Optional: project writeup or demo video
+    extra: "https://youtu.be/POkHNuLy4Lw",
     gradient: "linear-gradient(160deg, rgb(0, 116, 217) 0%, rgb(35, 35, 35) 40%, rgb(0, 0, 0) 100%)",
     mainColor: "rgb(0, 116, 217)",
     dimmedColor: "rgb(51, 153, 255)",    
