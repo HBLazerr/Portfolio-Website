@@ -3,14 +3,14 @@ export const projectData = {
     name: "FairGame™ ",
     type: "WEB",
     tools: "VERCEL, MAILCHIMP",
-    toolsList: ["VERCEL", "MAILCHIMP", "VISUAL STUDIO CODE", "DISCORD", "FIGMA", "NOTION", "MICROSOFT TEAMS"],
+    toolsList: ["VERCEL", "MAILCHIMP", "VISUAL STUDIO CODE", "DISCORD", "FIGMA", "NOTION", "MICROSOFT TEAMS", "GITHUB"],
     duration: "22 HRS",
     year: "2024",
     description:
       "Developed a fully responsive 'Coming Soon' page for a web repository with Mailchimp integration for newsletter signups. Worked alongside fellow developers and designers in production studio.",
     url: "https://fair-game.org",
     image: "../media/FairGame.png",
-    screenshots: ["../media/FairGame-gif.gif", "../media/FairGame-screenshot1.png", "../media/FairGame-screenshot2.png", "../media/FairGame-screenshot3.png", "../media/FairGame-screenshot4.png", "../media/FairGame-screenshot5.png", "../media/FairGame-screenshot6.png", "../media/FairGame-screenshot7.png", "../media/FairGame-screenshot8.png", "../media/FairGame-screenshot9.png"],
+    screenshots: ["../media/FairGame-screenshot9.png", "../media/FairGame-screenshot8.png", "../media/FairGame-screenshot10.png", "../media/FairGame-screenshot5.png", "../media/FairGame-screenshot6.png", "../media/FairGame-screenshot3.png", "../media/FairGame-screenshot4.png", "../media/FairGame-screenshot7.png", "../media/FairGame-screenshot1.png", "../media/FairGame-screenshot2.png", "../media/FairGame-gif.gif"],
     role: "Web Developer",
     source: "https://github.com/FAIR-GAME-TM", // private repo
     extra: "https://youtu.be/JezzteaO-OM?si=VWYfGYvZO4oyrrr1",
@@ -25,7 +25,7 @@ export const projectData = {
     name: "Lazerr's Player",
     type: "SOFTWARE",
     tools: "TKINTER, SPOTIPY",
-    toolsList: ["React", "Test", "Test"],
+    toolsList: ["TKINTER", "SPOTIPY", "PYTHON", "VISUAL STUDIO CODE", "GITHUB", "SPOTIFY WEB API", "PILLOW", "OAUTH2"],
     duration: "24 HRS",
     year: "2024",
     description: "Custom desktop Spotify player that uses OAuth2 authentication and Spotify API to play tracks, view users top/recent songs, and control playback with a GUi built with tkinter.",
@@ -45,7 +45,7 @@ export const projectData = {
     name: "WeatherDAN",
     type: "WEB",
     tools: "NODE, EXPRESS",
-    toolsList: ["React", "Test", "Test"],
+    toolsList: ["NODE", "EXPRESS", "OPENWEATHERMAP API", "JAVASCRIPT", "HTML/CSS", "VISUAL STUDIO CODE", "GITHUB"],
     duration: "9 HRS",
     year: "2024",
     description:
@@ -67,7 +67,7 @@ export const projectData = {
     name: "Hearts Break App (SIP)",
     type: "MOBILE",
     tools: "REACT NATIVE, EXPO",
-    toolsList: ["React", "Test", "Test"],
+    toolsList: ["REACT NATIVE", "EXPO", "EXPO GO", "MIDJOURNEY", "FIGMA"],
     duration: "IN PROGRESS",
     year: "2024",
     description: "A mobile self-improvement app built from scratch to support individuals through heartbreak using personalized tools and mental wellness features.",
@@ -87,10 +87,10 @@ export const projectData = {
     name: "Alien Attack Game",
     type: "SOFTWARE",
     tools: "C++, VISUAL STUDIO",
-    toolsList: ["React", "Test", "Test"],
+    toolsList: ["C++", "VISUAL STUDIO", "GITHUB"],
     duration: "15 HRS",
     year: "2022",
-    description: "C++ choice-based console game where you escape or fight aliens. Shows input/output, conditionals, loops, classes, and headers.",
+    description: "C++ choice-based console game where you escape or fight aliens. Shows input/output, conditionals, loops, classes, and cpp headers.",
     url: "https://youtu.be/fw1ZUdluxDI?si=Fd_FB-ZNdn4WhDOj",
     image: "../media/AlienAttack-gif.gif",
     screenshots: ["../media/AlienAttack-screenshot1.png", "../media/AlienAttack-screenshot2.png", "../media/AlienAttack-screenshot3.png"],
@@ -104,10 +104,31 @@ export const projectData = {
   },
 
   section6: {
+    name: "Daniel's Portfolio",
+    type: "WEB",
+    tools: "VERCEL, JAVASCRIPT",
+    toolsList: ["VERCEL", "JAVASCRIPT", "HTML/CSS", "GITHUB", "VISUAL STUDIO CODE", "FIGMA"],
+    duration: "IN PROGRESS",
+    year: "2025",
+    description:
+      "My portfolio website that features my projects and skills. Demonstrates DOM manipulation, event listeners, and CSS animation.",
+    url: "https://www.danny-chavez.com/",
+    image: "../media/portfolio-screenshot.png",
+    screenshots: ["../media/portfolio-screenshot0.png", "../media/portfolio-screenshot1.png", "../media/portfolio-gif2.gif", "../media/portfolio-screenshot3.png", "../media/portfolio-screenshot4.png", "../media/portfolio-gif.gif", "../media/portfolio-screenshot5.png", "../media/portfolio-screenshot6.png", "../media/portfolio-screenshot7.png", "../media/portfolio-screenshot2.png", "../media/portfolio-screenshot8.png", "../media/portfolio-screenshot9.png"],
+    role: "Developer and Designer",
+    source: "https://github.com/HBLazerr/Portfolio-Website",
+    extra: "https://docs.google.com/document/d/1n5cCfpLaI-YUwBVejsOzLeLbEZoFsfitMGmg2qdv8B8/edit?usp=sharing",
+    gradient: "radial-gradient(circle, #18d987 0%, #4ff3ad 20%, #10b273 40%, rgba(24, 217, 135, 0.2) 55%, #2e2e2e 70%, #444 80%, #b9b9b9 100%)",
+    mainColor: "#18d987",
+    dimmedColor: "#10b273",
+    objectives: ["obj1", "obj5"]
+  },
+
+  section7: {
     name: "Movie LSTER",
     type: "WEB",
-    tools: "HTML/CSS/JS",
-    toolsList: ["React", "Test", "Test"],
+    tools: "HTML/CSS, JAVASCRIPT",
+    toolsList: ["HTML/CSS", "JAVASCRIPT", "GITHUB", "VISUAL STUDIO CODE"],
     duration: "6 HRS",
     year: "2024",
     description:
@@ -125,7 +146,7 @@ export const projectData = {
     objectives: ["obj6"]
   },
 
-  section7: {
+  section8: {
     name: "ASCII Maze",
     type: "SOFTWARE",
     tools: "C++, Visual Studio",
@@ -145,7 +166,7 @@ export const projectData = {
     objectives: ["obj6"]
   },
 
-  section8: {
+  section9: {
     name: "Pokémon Data Analysis",
     type: "DATA",
     tools: "PYTHON, PANDAS",
