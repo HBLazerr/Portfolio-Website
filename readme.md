@@ -21,7 +21,7 @@ A personalized portfolio that showcases my creative development journey, project
   - Added project filtering and full-screen modals upon image click
   - Objectives page with applied filtering redirect to projects page 
 - [Live Site](https://danny-chavez.com)
-- [Latest Portfolio Preview](media/portfolio-gif3.gif)
+- ![Latest Portfolio Preview](./public/media/portfolio-gif3.gif)
 
 ## Future (Possible Expansion)
 * Add Resume to About page
