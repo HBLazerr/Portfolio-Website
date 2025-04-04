@@ -1,17 +1,34 @@
 # Daniel Chavez
 
-Portfolio website which shows off projects and randomized insights of myself. Includes a landing page, portfolio/projects page, an about page, and a degree objectives page as of [04-03-2025].
+A personalized portfolio that showcases my creative development journey, projects, and random things about myself. Includes a parallax landing page, portfolio/projects section, about page, and a degree objectives page.
+
+**Current as of:** April 4th, 2025
+
+---
+
+## 🎬 Version History
+
+### 🔹 v1 – Initial Build (August 2024)
+- Basic portfolio website with scattered design elements
+- Placeholder project content including lorem ipsum descriptions
+- YouTube demo: [Watch original version](https://youtu.be/MPpPy4tND3g?si=fKZbvsQMMWfA9KRn)
+
+### 🔹 v2 – Latest Version (2025)
+- Fully custom-coded and responsive
+- Features:
+  - HTML-injected minimal navigation bar with full screen navigation menu
+  - Animated custom cursor and hover logic
+  - Added project filtering and full-screen modals upon image click
+  - Objectives page with applied filtering redirect to projects page 
+- ![Live Site](https://danny-chavez.com)
+- ![Latest Portfolio Preview](./media/portfolio-gif3.gif)
 
 ## Future (Possible Expansion)
-* Add resume
+* Add Resume to About page
 * Improve background and UI color palette
 * Create modal to explain nav bar layout and custom cursor animations
-
-## TODO
-* Add more screenshots to projects in Portfolio page from Obj 1, 5, 6
-* Add new project for 1, 5, 6
 * Add a 'Community Statement' section to About page
-* Add contact page
+* Add 'Contact' section to About page
 
 ## Author
 
