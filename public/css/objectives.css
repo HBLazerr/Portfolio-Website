@@ -200,7 +200,7 @@ input:checked+label .description {
 }
 
 .card[for="slide4"] {
-    background-image: url("../media/HeartsBreak-screenshot1.png");
+    background-image: url("../media/hb-mockup-welcome.png");
     /* CHANGE LATER */
 }
 
@@ -210,6 +210,6 @@ input:checked+label .description {
 }
 
 .card[for="slide6"] {
-    background-image: url("../media/MovieLSTER.png");
+    background-image: url("../media/ascii-maze-screenshot1.png");
     /* CHANGE LATER */
 }

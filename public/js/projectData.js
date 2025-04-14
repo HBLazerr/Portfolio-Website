@@ -11,16 +11,16 @@ export const projectData = {
     url: "https://fair-game.org",
     image: "../media/FairGame.png",
     screenshots: [
-      "../media/FairGame-screenshot9.png", 
-      "../media/FairGame-screenshot8.png", 
-      "../media/FairGame-screenshot10.png", 
-      "../media/FairGame-screenshot5.png", 
-      "../media/FairGame-screenshot6.png", 
-      "../media/FairGame-screenshot3.png", 
-      "../media/FairGame-screenshot4.png", 
-      "../media/FairGame-screenshot7.png", 
-      "../media/FairGame-screenshot1.png", 
-      "../media/FairGame-screenshot2.png", 
+      "../media/FairGame-screenshot9.png",
+      "../media/FairGame-screenshot8.png",
+      "../media/FairGame-screenshot10.png",
+      "../media/FairGame-screenshot5.png",
+      "../media/FairGame-screenshot6.png",
+      "../media/FairGame-screenshot3.png",
+      "../media/FairGame-screenshot4.png",
+      "../media/FairGame-screenshot7.png",
+      "../media/FairGame-screenshot1.png",
+      "../media/FairGame-screenshot2.png",
       "../media/FairGame-gif.gif"
     ],
     role: "Web Developer",
@@ -44,9 +44,9 @@ export const projectData = {
     url: "https://youtu.be/clU2UqZ8BuU?si=FBGhrCNIEr_Dbyal",
     image: "../media/lazerrs-player.png",
     screenshots: [
-      "../media/lazerrs-player.png", 
-      "../media/lazerrs-player-screenshot1.png", 
-      "../media/lazerrs-player-screenshot2.png", 
+      "../media/lazerrs-player.png",
+      "../media/lazerrs-player-screenshot1.png",
+      "../media/lazerrs-player-screenshot2.png",
       "../media/lazerrs-player-screenshot3.png"
     ],
     role: "Solo Developer",
@@ -70,8 +70,8 @@ export const projectData = {
     url: "https://weather-dan.up.railway.app/",
     image: "../media/WeatherDAN-gif.gif",
     screenshots: [
-      "../media/WeatherDAN.png", 
-      "../media/WeatherDAN-screenshot1.png", 
+      "../media/WeatherDAN.png",
+      "../media/WeatherDAN-screenshot1.png",
       "../media/WeatherDAN-screenshot2.png"
     ],
     role: "Full Stack Developer",
@@ -85,6 +85,35 @@ export const projectData = {
   },
 
   section4: {
+    name: "Hearts Break App (SIP)",
+    type: "MOBILE",
+    tools: "REACT NATIVE, EXPO",
+    toolsList: ["REACT NATIVE", "EXPO", "EXPO ROUTER", "SUPABASE", "ASYNCSTORAGE", "FIGMA"],
+    duration: "IN PROGRESS",
+    year: "2024",
+    description: "An innovative mobile app designed to help users heal from emotional heartbreak by offering interactive tools that promote both mental and physical wellness.",
+    url: "https://youtu.be/a7s_K5p8KdI",
+    image: "../media/hb-mockup-welcome.png",
+    screenshots: [
+      "../media/hb-mockup-home.png",
+      "../media/hb-mockup-journal.png",
+      "../media/hb-mockup-progress.png",
+      "../media/hb-mockup-savedmemories.png",
+      "../media/HB-problem-statement.png",
+      "../media/HeartsBreak-screenshot4.png",
+      "../media/HeartsBreak-screenshot5.png",
+      "../media/HeartsBreak-screenshot6.png"
+    ],
+    role: "Developer and Designer",
+    source: "https://snack.expo.dev/@lazerr/hearts-break?platform=ios",
+    extra: "https://docs.google.com/document/d/1PVig2AcxE8CG4pxo-hu1PkPI9GV2Fgap-mNkQmoeHeI/edit?usp=sharing",
+    gradient: "linear-gradient(45deg, rgba(5, 15, 20, 1) 0%, rgba(24, 45, 41, 1) 50%, rgba(60, 76, 84, 1) 100%)",
+    mainColor: "rgb(228, 40, 69)",
+    dimmedColor: "rgba(228, 40, 69, .6)",
+    objectives: ["obj1", "obj4"]
+  },
+
+  section5: {
     name: "Daniel's Portfolio",
     type: "WEB",
     tools: "VERCEL, JAVASCRIPT",
@@ -119,7 +148,7 @@ export const projectData = {
     objectives: ["obj1", "obj5"]
   },
 
-  section5: {
+  section6: {
     name: "Alien Attack Game",
     type: "SOFTWARE",
     tools: "C++, VISUAL STUDIO",
@@ -130,9 +159,9 @@ export const projectData = {
     url: "https://youtu.be/fw1ZUdluxDI?si=Fd_FB-ZNdn4WhDOj",
     image: "../media/AlienAttack-gif.gif",
     screenshots: [
-      "../media/AlienAttack-screenshot1.png", 
+      "../media/AlienAttack-screenshot1.png",
       "../media/AlienAttack-screenshot2.png",
-       "../media/AlienAttack-screenshot3.png"
+      "../media/AlienAttack-screenshot3.png"
     ],
     role: "Solo Developer",
     source: "https://github.com/HBLazerr/Alien-Attack",
@@ -141,34 +170,6 @@ export const projectData = {
     mainColor: "rgb(51, 184, 39)",
     dimmedColor: "rgba(51, 184, 39, .6)",
     objectives: ["obj2"]
-  },
-
-  section6: {
-    name: "Hearts Break App (SIP)",
-    type: "MOBILE",
-    tools: "REACT NATIVE, EXPO",
-    toolsList: ["REACT NATIVE", "EXPO", "EXPO GO", "MIDJOURNEY", "FIGMA"],
-    duration: "IN PROGRESS",
-    year: "2024",
-    description: "A mobile self-improvement app built from scratch to support individuals through heartbreak using personalized tools and mental wellness features.",
-    url: "https://youtu.be/a7s_K5p8KdI",
-    image: "../media/HeartsBreak-screenshot2.png",
-    screenshots: [
-      "../media/HeartsBreak-screenshot1.png",
-       "../media/HeartsBreak-screenshot2.png", 
-       "../media/HeartsBreak-screenshot3.png", 
-       "../media/HB-problem-statement.png", 
-       "../media/HeartsBreak-screenshot4.png", 
-       "../media/HeartsBreak-screenshot5.png", 
-       "../media/HeartsBreak-screenshot6.png"
-    ],
-    role: "Developer and Designer",
-    source: "https://snack.expo.dev/@lazerr/hearts-break?platform=ios",
-    extra: "https://docs.google.com/document/d/1PVig2AcxE8CG4pxo-hu1PkPI9GV2Fgap-mNkQmoeHeI/edit?usp=sharing",
-    gradient: "linear-gradient(45deg, rgba(5, 15, 20, 1) 0%, rgba(24, 45, 41, 1) 50%, rgba(60, 76, 84, 1) 100%)",
-    mainColor: "rgb(228, 40, 69)",
-    dimmedColor: "rgba(228, 40, 69, .6)",
-    objectives: ["obj1", "obj4"]
   },
 
   section7: {
@@ -199,7 +200,7 @@ export const projectData = {
     extra: "https://youtu.be/POkHNuLy4Lw",
     gradient: "linear-gradient(160deg, rgb(0, 116, 217) 0%, rgb(35, 35, 35) 40%, rgb(0, 0, 0) 100%)",
     mainColor: "rgb(0, 116, 217)",
-    dimmedColor: "rgb(51, 153, 255)",    
+    dimmedColor: "rgb(51, 153, 255)",
     objectives: ["obj6"]
   },
 
@@ -214,9 +215,9 @@ export const projectData = {
     url: "https://youtu.be/6bjArLnZPew?si=mN8E4bLWiFQ8jSlc",
     image: "../media/ascii-maze-gif.gif",
     screenshots: [
-      "../media/ascii-maze-screenshot1.png", 
-      "../media/ascii-maze-screenshot2.png", 
-      "../media/ascii-maze-screenshot3.png", 
+      "../media/ascii-maze-screenshot1.png",
+      "../media/ascii-maze-screenshot2.png",
+      "../media/ascii-maze-screenshot3.png",
       "../media/ascii-maze-screenshot4.png"
     ],
     role: "Solo Developer",
@@ -240,9 +241,9 @@ export const projectData = {
     url: "https://hblazerr.github.io/CSC256/Movie%20List/index.html",
     image: "../media/MovieLSTER-gif.gif",
     screenshots: [
-      "../media/MovieLSTER.png", 
-      "../media/MovieLSTER-screenshot1.png", 
-      "../media/MovieLSTER-screenshot2.png", 
+      "../media/MovieLSTER.png",
+      "../media/MovieLSTER-screenshot1.png",
+      "../media/MovieLSTER-screenshot2.png",
       "../media/MovieLSTER-screenshot3.png"
     ],
     role: "Solo Developer",
@@ -266,12 +267,12 @@ export const projectData = {
     url: "https://colab.research.google.com/drive/186He68kiXGm9l7ZlUo5bJjfRFVrOGfav?usp=sharing",
     image: "../media/pokemon-data-screenshot5.png",
     screenshots: [
-      "../media/pokemon-data-screenshot1.png", 
-      "../media/pokemon-data-screenshot2.png", 
-      "../media/pokemon-data-screenshot3.png", 
-      "../media/pokemon-data-screenshot4.png", 
-      "../media/pokemon-data-screenshot5.png", 
-      "../media/pokemon-data-screenshot6.png", 
+      "../media/pokemon-data-screenshot1.png",
+      "../media/pokemon-data-screenshot2.png",
+      "../media/pokemon-data-screenshot3.png",
+      "../media/pokemon-data-screenshot4.png",
+      "../media/pokemon-data-screenshot5.png",
+      "../media/pokemon-data-screenshot6.png",
       "../media/pokemon-data-screenshot7.png"
     ],
     role: "Data Analyst",
